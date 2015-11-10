@@ -7,20 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		215991611BF222FD0009EF24 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 215991571BF222FD0009EF24 /* bubble.png */; };
-		215991621BF222FD0009EF24 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 215991581BF222FD0009EF24 /* love.png */; };
 		215991631BF222FD0009EF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215991591BF222FD0009EF24 /* Main.storyboard */; };
-		215991641BF222FD0009EF24 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159915B1BF222FD0009EF24 /* MyCell.m */; };
-		215991651BF222FD0009EF24 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2159915C1BF222FD0009EF24 /* MyCell.xib */; };
-		215991661BF222FD0009EF24 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159915E1BF222FD0009EF24 /* UIView+Genie.m */; };
 		215991671BF222FD0009EF24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215991601BF222FD0009EF24 /* ViewController.m */; };
 		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; };
 		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; };
 		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; };
 		C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */; };
 		C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */; };
-		C213D4E41BF1E9A60000535D /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4E21BF1E9A60000535D /* PackCell.m */; };
-		C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E31BF1E9A60000535D /* PackCell.xib */; };
 		C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E61BF1EE370000535D /* PackTimeShaft.png */; };
 		C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4EA1BF1F1BB0000535D /* Background.jpg */; };
 		C26272FF1BF07015004DE7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26272FE1BF07015004DE7D4 /* main.m */; };
@@ -45,17 +38,17 @@
 		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; };
 		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
 		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; };
+		C296F1471BF22B36008A9EBD /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1451BF22B36008A9EBD /* MyCell.m */; settings = {ASSET_TAGS = (); }; };
+		C296F1481BF22B36008A9EBD /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296F1461BF22B36008A9EBD /* MyCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C296F14D1BF22B95008A9EBD /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F14B1BF22B95008A9EBD /* PackCell.m */; settings = {ASSET_TAGS = (); }; };
+		C296F14E1BF22B95008A9EBD /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296F14C1BF22B95008A9EBD /* PackCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1511BF22BD1008A9EBD /* UIView+Genie.m */; settings = {ASSET_TAGS = (); }; };
+		C296F1551BF22C1C008A9EBD /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1531BF22C1C008A9EBD /* bubble.png */; settings = {ASSET_TAGS = (); }; };
+		C296F1561BF22C1C008A9EBD /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1541BF22C1C008A9EBD /* love.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		215991571BF222FD0009EF24 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = "../../Scenes/ViewController/主页面/bubble.png"; sourceTree = "<group>"; };
-		215991581BF222FD0009EF24 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = love.png; path = "../../Scenes/ViewController/主页面/love.png"; sourceTree = "<group>"; };
 		215991591BF222FD0009EF24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2159915A1BF222FD0009EF24 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = "../../../../Scenes/ViewController/主页面/MyCell.h"; sourceTree = "<group>"; };
-		2159915B1BF222FD0009EF24 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = "../../../../Scenes/ViewController/主页面/MyCell.m"; sourceTree = "<group>"; };
-		2159915C1BF222FD0009EF24 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyCell.xib; path = "../../../../Scenes/ViewController/主页面/MyCell.xib"; sourceTree = "<group>"; };
-		2159915D1BF222FD0009EF24 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "../../Scenes/ViewController/主页面/UIView+Genie.h"; sourceTree = "<group>"; };
-		2159915E1BF222FD0009EF24 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "../../Scenes/ViewController/主页面/UIView+Genie.m"; sourceTree = "<group>"; };
 		2159915F1BF222FD0009EF24 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		215991601BF222FD0009EF24 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C213D4D11BF1D48D0000535D /* Trail_DownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_DownCell.h; sourceTree = "<group>"; };
@@ -65,9 +58,6 @@
 		C213D4D51BF1D48D0000535D /* Trail_UpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_UpCell.m; sourceTree = "<group>"; };
 		C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_UpCell.xib; sourceTree = "<group>"; };
 		C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrailTimeShaft.png; sourceTree = "<group>"; };
-		C213D4E11BF1E9A60000535D /* PackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackCell.h; sourceTree = "<group>"; };
-		C213D4E21BF1E9A60000535D /* PackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackCell.m; sourceTree = "<group>"; };
-		C213D4E31BF1E9A60000535D /* PackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackCell.xib; sourceTree = "<group>"; };
 		C213D4E61BF1EE370000535D /* PackTimeShaft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PackTimeShaft.png; sourceTree = "<group>"; };
 		C213D4EA1BF1F1BB0000535D /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUIJI_LIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +92,16 @@
 		C26273551BF0929B004DE7D4 /* GUIJI_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUIJI_PrefixHeader.pch; sourceTree = "<group>"; };
 		C296F1401BF1F381008A9EBD /* TrailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailHelper.h; sourceTree = "<group>"; };
 		C296F1411BF1F381008A9EBD /* TrailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailHelper.m; sourceTree = "<group>"; };
+		C296F1441BF22B36008A9EBD /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		C296F1451BF22B36008A9EBD /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		C296F1461BF22B36008A9EBD /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		C296F14A1BF22B95008A9EBD /* PackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackCell.h; sourceTree = "<group>"; };
+		C296F14B1BF22B95008A9EBD /* PackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackCell.m; sourceTree = "<group>"; };
+		C296F14C1BF22B95008A9EBD /* PackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackCell.xib; sourceTree = "<group>"; };
+		C296F1501BF22BD1008A9EBD /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
+		C296F1511BF22BD1008A9EBD /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
+		C296F1531BF22C1C008A9EBD /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		C296F1541BF22C1C008A9EBD /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,31 +115,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		215991681BF223810009EF24 /* 主页面 */ = {
-			isa = PBXGroup;
-			children = (
-				2159915A1BF222FD0009EF24 /* MyCell.h */,
-				2159915B1BF222FD0009EF24 /* MyCell.m */,
-				2159915C1BF222FD0009EF24 /* MyCell.xib */,
-			);
-			path = "主页面";
-			sourceTree = "<group>";
-		};
-		215991691BF223EB0009EF24 /* 主页面抽屉 */ = {
-			isa = PBXGroup;
-			children = (
-				2159915D1BF222FD0009EF24 /* UIView+Genie.h */,
-				2159915E1BF222FD0009EF24 /* UIView+Genie.m */,
-			);
-			path = "主页面抽屉";
-			sourceTree = "<group>";
-		};
 		C213D4CF1BF1D48D0000535D /* 自定义cell */ = {
 			isa = PBXGroup;
 			children = (
-				215991681BF223810009EF24 /* 主页面 */,
+				C296F1491BF22B95008A9EBD /* 行囊页面 */,
+				C296F1431BF22B36008A9EBD /* 主页面 */,
 				C213D4D01BF1D48D0000535D /* 系统自动生成页面 */,
-				C213D4E01BF1E9780000535D /* 行囊页面 */,
 			);
 			path = "自定义cell";
 			sourceTree = "<group>";
@@ -161,24 +142,13 @@
 			isa = PBXGroup;
 			children = (
 				C26273291BF07034004DE7D4 /* beizhu.txt */,
+				C296F1531BF22C1C008A9EBD /* bubble.png */,
+				C296F1541BF22C1C008A9EBD /* love.png */,
 				C213D4EA1BF1F1BB0000535D /* Background.jpg */,
 				C213D4E61BF1EE370000535D /* PackTimeShaft.png */,
 				C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */,
-				215991571BF222FD0009EF24 /* bubble.png */,
-				215991581BF222FD0009EF24 /* love.png */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		C213D4E01BF1E9780000535D /* 行囊页面 */ = {
-			isa = PBXGroup;
-			children = (
-				C213D4E11BF1E9A60000535D /* PackCell.h */,
-				C213D4E21BF1E9A60000535D /* PackCell.m */,
-				C213D4E31BF1E9A60000535D /* PackCell.xib */,
-			);
-			name = "行囊页面";
-			path = "系统自动生成页面/行囊页面";
 			sourceTree = "<group>";
 		};
 		C26272F11BF07015004DE7D4 = {
@@ -390,7 +360,7 @@
 		C262733D1BF07034004DE7D4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				215991691BF223EB0009EF24 /* 主页面抽屉 */,
+				C296F14F1BF22BD1008A9EBD /* 主页面抽屉 */,
 				C262733E1BF07034004DE7D4 /* beizhu.txt */,
 			);
 			path = Vendors;
@@ -414,6 +384,35 @@
 				C296F1411BF1F381008A9EBD /* TrailHelper.m */,
 			);
 			path = "系统自动生成页面";
+			sourceTree = "<group>";
+		};
+		C296F1431BF22B36008A9EBD /* 主页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C296F1441BF22B36008A9EBD /* MyCell.h */,
+				C296F1451BF22B36008A9EBD /* MyCell.m */,
+				C296F1461BF22B36008A9EBD /* MyCell.xib */,
+			);
+			path = "主页面";
+			sourceTree = "<group>";
+		};
+		C296F1491BF22B95008A9EBD /* 行囊页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C296F14A1BF22B95008A9EBD /* PackCell.h */,
+				C296F14B1BF22B95008A9EBD /* PackCell.m */,
+				C296F14C1BF22B95008A9EBD /* PackCell.xib */,
+			);
+			path = "行囊页面";
+			sourceTree = "<group>";
+		};
+		C296F14F1BF22BD1008A9EBD /* 主页面抽屉 */ = {
+			isa = PBXGroup;
+			children = (
+				C296F1501BF22BD1008A9EBD /* UIView+Genie.h */,
+				C296F1511BF22BD1008A9EBD /* UIView+Genie.m */,
+			);
+			path = "主页面抽屉";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,25 +475,25 @@
 			files = (
 				215991631BF222FD0009EF24 /* Main.storyboard in Resources */,
 				C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */,
-				215991621BF222FD0009EF24 /* love.png in Resources */,
-				215991651BF222FD0009EF24 /* MyCell.xib in Resources */,
+				C296F1481BF22B36008A9EBD /* MyCell.xib in Resources */,
 				C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */,
 				C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */,
 				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
 				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
 				C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */,
 				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C296F14E1BF22B95008A9EBD /* PackCell.xib in Resources */,
 				C26273431BF07034004DE7D4 /* beizhu.txt in Resources */,
-				215991611BF222FD0009EF24 /* bubble.png in Resources */,
+				C296F1561BF22C1C008A9EBD /* love.png in Resources */,
 				C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */,
 				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C296F1551BF22C1C008A9EBD /* bubble.png in Resources */,
 				C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */,
 				C26273451BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273471BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273411BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273441BF07034004DE7D4 /* beizhu.txt in Resources */,
-				C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */,
 				C26273461BF07034004DE7D4 /* beizhu.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,19 +508,19 @@
 				C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */,
 				C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */,
 				C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */,
-				215991661BF222FD0009EF24 /* UIView+Genie.m in Sources */,
+				C296F14D1BF22B95008A9EBD /* PackCell.m in Sources */,
 				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
+				C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
 				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
-				C213D4E41BF1E9A60000535D /* PackCell.m in Sources */,
+				C296F1471BF22B36008A9EBD /* MyCell.m in Sources */,
 				C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */,
 				215991671BF222FD0009EF24 /* ViewController.m in Sources */,
 				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
 				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
 				C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */,
-				215991641BF222FD0009EF24 /* MyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

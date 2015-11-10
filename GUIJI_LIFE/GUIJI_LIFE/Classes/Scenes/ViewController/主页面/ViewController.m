@@ -262,9 +262,6 @@ static NSString *const cellID = @"mycell";
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    cell.imView.image = [UIImage imageNamed:@"1"];
-    cell.namelabel.text = @"hehe";
-    cell.imgView.image = [UIImage imageNamed:@"1"];
     
     return cell;
 }
