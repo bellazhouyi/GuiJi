@@ -9,13 +9,16 @@
 #ifndef GUIJI_PrefixHeader_pch
 #define GUIJI_PrefixHeader_pch
 
+// ---- 这里的类是公用类
+
 //引入Model类
 #import "MapInfo.h"
 
-//引入工具类
+//TrailVC界面引入的类
 #import "TrailHelper.h"
 
-
+//引入VC类
+#import "TrailViewController.h"
 
 #import "AppDelegate.h"
 

@@ -24,6 +24,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark 跳转到TrailVC 界面
+- (IBAction)toTrailVCAction:(UIButton *)sender {
+    
+    TrailViewController *trailVC = [TrailViewController new];
+    
+    //模态出TrailVC 界面
+    [self presentViewController:trailVC animated:YES completion:nil];
+    
+}
+
 
 
 @end

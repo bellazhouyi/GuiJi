@@ -23,8 +23,8 @@
 
 @implementation TrailViewController
 
-static NSString *upCellID = @"cell";
-static NSString *downCellID = @"cellID";
+static NSString *upCellID = @"cellUp_Identifier";
+static NSString *downCellID = @"cellDown_Identifier";
 
 #pragma mark 视图加载完成
 - (void)viewDidLoad {
@@ -90,13 +90,15 @@ static NSString *downCellID = @"cellID";
         }
         else{
             NSLog(@"  %@",timeMapInfo.locationName);
-        //添加到数组中
-        [self.arrayMapInfo addObject:timeMapInfo];
+            //添加到数组中
+            [self.arrayMapInfo addObject:timeMapInfo];
+            
+            //刷新数据
+            [self.tableView reloadData];
         }
         time = time + 2;
     }
     
-
 }
 
 #pragma mark - 禁止屏幕旋转
@@ -107,6 +109,26 @@ static NSString *downCellID = @"cellID";
 
 
 #pragma mark - UITableViewDelegate UITableViewDataSource
+
+#pragma mark 添加一个HeaderView
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(100, 2, 600, 3)];
+    
+    [backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    backButton.transform = CGAffineTransformMakeRotation(M_PI / 2);
+    
+    return backButton;
+}
+
+#pragma mark 返回按钮的返回事件
+-(void)backAction:(UIButton *)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - 设置cell 的行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -131,7 +153,6 @@ static NSString *downCellID = @"cellID";
         MapInfo *upMapInfo = self.arrayMapInfo[indexPath.row];
         
         if (upMapInfo == nil) {
-        
             upCell.UPLabel.text = @"Sorry,那个时候还没跟上你的脚步";
         }else{
             
@@ -173,6 +194,11 @@ static NSString *downCellID = @"cellID";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+#pragma mark - 给HeaderView一个宽度
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
 }
 
 
