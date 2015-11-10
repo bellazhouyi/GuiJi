@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; settings = {ASSET_TAGS = (); }; };
+		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; settings = {ASSET_TAGS = (); }; };
+		C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C213D4DE1BF1D4C30000535D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DC1BF1D4C30000535D /* 2.jpg */; settings = {ASSET_TAGS = (); }; };
+		C213D4DF1BF1D4C30000535D /* time1.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* time1.png */; settings = {ASSET_TAGS = (); }; };
 		C26272FF1BF07015004DE7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26272FE1BF07015004DE7D4 /* main.m */; };
 		C26273081BF07015004DE7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26273061BF07015004DE7D4 /* Main.storyboard */; };
 		C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
@@ -33,6 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C213D4D11BF1D48D0000535D /* Trail_DownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_DownCell.h; sourceTree = "<group>"; };
+		C213D4D21BF1D48D0000535D /* Trail_DownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_DownCell.m; sourceTree = "<group>"; };
+		C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_DownCell.xib; sourceTree = "<group>"; };
+		C213D4D41BF1D48D0000535D /* Trail_UpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_UpCell.h; sourceTree = "<group>"; };
+		C213D4D51BF1D48D0000535D /* Trail_UpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_UpCell.m; sourceTree = "<group>"; };
+		C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_UpCell.xib; sourceTree = "<group>"; };
+		C213D4DC1BF1D4C30000535D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		C213D4DD1BF1D4C30000535D /* time1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time1.png; sourceTree = "<group>"; };
 		C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUIJI_LIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26272FE1BF07015004DE7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C26273071BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +62,7 @@
 		C26273231BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
 		C26273251BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
 		C26273271BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
-		C26273291BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273291BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = beizhu.txt; path = ../beizhu.txt; sourceTree = "<group>"; };
 		C262732C1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
 		C262732F1BF07034004DE7D4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C26273301BF07034004DE7D4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -79,6 +93,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C213D4CF1BF1D48D0000535D /* 自定义cell */ = {
+			isa = PBXGroup;
+			children = (
+				C213D4D01BF1D48D0000535D /* 系统自动生成页面 */,
+			);
+			path = "自定义cell";
+			sourceTree = "<group>";
+		};
+		C213D4D01BF1D48D0000535D /* 系统自动生成页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C213D4D11BF1D48D0000535D /* Trail_DownCell.h */,
+				C213D4D21BF1D48D0000535D /* Trail_DownCell.m */,
+				C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */,
+				C213D4D41BF1D48D0000535D /* Trail_UpCell.h */,
+				C213D4D51BF1D48D0000535D /* Trail_UpCell.m */,
+				C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */,
+			);
+			path = "系统自动生成页面";
+			sourceTree = "<group>";
+		};
+		C213D4DB1BF1D4C30000535D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C26273291BF07034004DE7D4 /* beizhu.txt */,
+				C213D4DC1BF1D4C30000535D /* 2.jpg */,
+				C213D4DD1BF1D4C30000535D /* time1.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		C26272F11BF07015004DE7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +215,7 @@
 		C26273201BF07034004DE7D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C213D4CF1BF1D48D0000535D /* 自定义cell */,
 				C26273211BF07034004DE7D4 /* beizhu.txt */,
 			);
 			path = Views;
@@ -203,7 +249,7 @@
 		C26273281BF07034004DE7D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C26273291BF07034004DE7D4 /* beizhu.txt */,
+				C213D4DB1BF1D4C30000535D /* Image */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -361,11 +407,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */,
+				C213D4DF1BF1D4C30000535D /* time1.png in Resources */,
 				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
 				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
 				C26273081BF07015004DE7D4 /* Main.storyboard in Resources */,
+				C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */,
 				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C213D4DE1BF1D4C30000535D /* 2.jpg in Resources */,
 				C26273431BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */,
 				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273451BF07034004DE7D4 /* beizhu.txt in Resources */,
@@ -384,11 +434,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */,
+				C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */,
 				C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */,
 				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
 				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
+				C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */,
 				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
 				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
