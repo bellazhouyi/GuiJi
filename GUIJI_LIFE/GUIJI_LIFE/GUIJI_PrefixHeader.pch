@@ -12,6 +12,13 @@
 //引入Model类
 #import "MapInfo.h"
 
+//引入工具类
+#import "TrailHelper.h"
+
+
+
+#import "AppDelegate.h"
+
 
 
 // Include any system framework and library headers here that should be included in all compilation units.
