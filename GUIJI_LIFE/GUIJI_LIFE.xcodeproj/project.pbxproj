@@ -11,8 +11,11 @@
 		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; settings = {ASSET_TAGS = (); }; };
 		C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C213D4DE1BF1D4C30000535D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DC1BF1D4C30000535D /* 2.jpg */; settings = {ASSET_TAGS = (); }; };
-		C213D4DF1BF1D4C30000535D /* time1.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* time1.png */; settings = {ASSET_TAGS = (); }; };
+		C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */; settings = {ASSET_TAGS = (); }; };
+		C213D4E41BF1E9A60000535D /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4E21BF1E9A60000535D /* PackCell.m */; settings = {ASSET_TAGS = (); }; };
+		C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E31BF1E9A60000535D /* PackCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E61BF1EE370000535D /* PackTimeShaft.png */; settings = {ASSET_TAGS = (); }; };
+		C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4EA1BF1F1BB0000535D /* Background.jpg */; settings = {ASSET_TAGS = (); }; };
 		C26272FF1BF07015004DE7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26272FE1BF07015004DE7D4 /* main.m */; };
 		C26273081BF07015004DE7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26273061BF07015004DE7D4 /* Main.storyboard */; };
 		C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
@@ -45,8 +48,12 @@
 		C213D4D41BF1D48D0000535D /* Trail_UpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_UpCell.h; sourceTree = "<group>"; };
 		C213D4D51BF1D48D0000535D /* Trail_UpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_UpCell.m; sourceTree = "<group>"; };
 		C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_UpCell.xib; sourceTree = "<group>"; };
-		C213D4DC1BF1D4C30000535D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		C213D4DD1BF1D4C30000535D /* time1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time1.png; sourceTree = "<group>"; };
+		C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrailTimeShaft.png; sourceTree = "<group>"; };
+		C213D4E11BF1E9A60000535D /* PackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackCell.h; sourceTree = "<group>"; };
+		C213D4E21BF1E9A60000535D /* PackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackCell.m; sourceTree = "<group>"; };
+		C213D4E31BF1E9A60000535D /* PackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackCell.xib; sourceTree = "<group>"; };
+		C213D4E61BF1EE370000535D /* PackTimeShaft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PackTimeShaft.png; sourceTree = "<group>"; };
+		C213D4EA1BF1F1BB0000535D /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUIJI_LIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26272FE1BF07015004DE7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C26273071BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C213D4D01BF1D48D0000535D /* 系统自动生成页面 */,
+				C213D4E01BF1E9780000535D /* 行囊页面 */,
 			);
 			path = "自定义cell";
 			sourceTree = "<group>";
@@ -118,10 +126,22 @@
 			isa = PBXGroup;
 			children = (
 				C26273291BF07034004DE7D4 /* beizhu.txt */,
-				C213D4DC1BF1D4C30000535D /* 2.jpg */,
-				C213D4DD1BF1D4C30000535D /* time1.png */,
+				C213D4EA1BF1F1BB0000535D /* Background.jpg */,
+				C213D4E61BF1EE370000535D /* PackTimeShaft.png */,
+				C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		C213D4E01BF1E9780000535D /* 行囊页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C213D4E11BF1E9A60000535D /* PackCell.h */,
+				C213D4E21BF1E9A60000535D /* PackCell.m */,
+				C213D4E31BF1E9A60000535D /* PackCell.xib */,
+			);
+			name = "行囊页面";
+			path = "系统自动生成页面/行囊页面";
 			sourceTree = "<group>";
 		};
 		C26272F11BF07015004DE7D4 = {
@@ -407,21 +427,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */,
-				C213D4DF1BF1D4C30000535D /* time1.png in Resources */,
+				C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */,
+				C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */,
 				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
 				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
 				C26273081BF07015004DE7D4 /* Main.storyboard in Resources */,
 				C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */,
 				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
-				C213D4DE1BF1D4C30000535D /* 2.jpg in Resources */,
 				C26273431BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */,
 				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */,
 				C26273451BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273471BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273411BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273441BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */,
 				C26273461BF07034004DE7D4 /* beizhu.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +462,7 @@
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
 				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
+				C213D4E41BF1E9A60000535D /* PackCell.m in Sources */,
 				C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */,
 				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,

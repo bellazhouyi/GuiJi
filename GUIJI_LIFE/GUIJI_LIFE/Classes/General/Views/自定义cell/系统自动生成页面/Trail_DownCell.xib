@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="389" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vhs-RU-tZF">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrailTimeShaft.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vhs-RU-tZF">
                         <rect key="frame" x="0.0" y="58" width="389" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="OD0-Ql-wdv"/>
@@ -46,6 +46,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="time1.png" width="158" height="33"/>
+        <image name="TrailTimeShaft.png" width="158" height="33"/>
     </resources>
 </document>
