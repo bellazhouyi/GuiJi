@@ -36,6 +36,7 @@
 		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; settings = {ASSET_TAGS = (); }; };
 		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
+		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		C26273511BF0926D004DE7D4 /* MapInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfo.h; sourceTree = "<group>"; };
 		C26273521BF0926D004DE7D4 /* MapInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfo.m; sourceTree = "<group>"; };
 		C26273551BF0929B004DE7D4 /* GUIJI_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUIJI_PrefixHeader.pch; sourceTree = "<group>"; };
+		C296F1401BF1F381008A9EBD /* TrailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailHelper.h; sourceTree = "<group>"; };
+		C296F1411BF1F381008A9EBD /* TrailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +227,7 @@
 		C26273221BF07034004DE7D4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C296F13F1BF1F381008A9EBD /* 系统自动生成页面 */,
 				C26273231BF07034004DE7D4 /* beizhu.txt */,
 			);
 			path = Helpers;
@@ -348,6 +352,15 @@
 			path = "系统自动生成的地图信息";
 			sourceTree = "<group>";
 		};
+		C296F13F1BF1F381008A9EBD /* 系统自动生成页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C296F1401BF1F381008A9EBD /* TrailHelper.h */,
+				C296F1411BF1F381008A9EBD /* TrailHelper.m */,
+			);
+			path = "系统自动生成页面";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +458,7 @@
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
 				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
 				C26273481BF07034004DE7D4 /* HomeViewController.m in Sources */,
+				C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
