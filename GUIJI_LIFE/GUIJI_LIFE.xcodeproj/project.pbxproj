@@ -7,42 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; settings = {ASSET_TAGS = (); }; };
-		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; settings = {ASSET_TAGS = (); }; };
-		C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */; settings = {ASSET_TAGS = (); }; };
-		C213D4E41BF1E9A60000535D /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4E21BF1E9A60000535D /* PackCell.m */; settings = {ASSET_TAGS = (); }; };
-		C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E31BF1E9A60000535D /* PackCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E61BF1EE370000535D /* PackTimeShaft.png */; settings = {ASSET_TAGS = (); }; };
-		C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4EA1BF1F1BB0000535D /* Background.jpg */; settings = {ASSET_TAGS = (); }; };
+		215991611BF222FD0009EF24 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 215991571BF222FD0009EF24 /* bubble.png */; };
+		215991621BF222FD0009EF24 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 215991581BF222FD0009EF24 /* love.png */; };
+		215991631BF222FD0009EF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215991591BF222FD0009EF24 /* Main.storyboard */; };
+		215991641BF222FD0009EF24 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159915B1BF222FD0009EF24 /* MyCell.m */; };
+		215991651BF222FD0009EF24 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2159915C1BF222FD0009EF24 /* MyCell.xib */; };
+		215991661BF222FD0009EF24 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159915E1BF222FD0009EF24 /* UIView+Genie.m */; };
+		215991671BF222FD0009EF24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215991601BF222FD0009EF24 /* ViewController.m */; };
+		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; };
+		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; };
+		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; };
+		C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D61BF1D48D0000535D /* Trail_UpCell.xib */; };
+		C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */; };
+		C213D4E41BF1E9A60000535D /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4E21BF1E9A60000535D /* PackCell.m */; };
+		C213D4E51BF1E9A60000535D /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E31BF1E9A60000535D /* PackCell.xib */; };
+		C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */ = {isa = PBXBuildFile; fileRef = C213D4E61BF1EE370000535D /* PackTimeShaft.png */; };
+		C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C213D4EA1BF1F1BB0000535D /* Background.jpg */; };
 		C26272FF1BF07015004DE7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26272FE1BF07015004DE7D4 /* main.m */; };
-		C26273081BF07015004DE7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26273061BF07015004DE7D4 /* Main.storyboard */; };
 		C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
 		C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C262730C1BF07015004DE7D4 /* Assets.xcassets */; };
 		C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C262730E1BF07015004DE7D4 /* LaunchScreen.storyboard */; };
-		C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C262731A1BF07034004DE7D4 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		C26273401BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731D1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273411BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731F1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273421BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273211BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273431BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273231BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273441BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273251BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273451BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273271BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273461BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273291BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273471BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262732C1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273481BF07034004DE7D4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273301BF07034004DE7D4 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273331BF07034004DE7D4 /* TrailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273361BF07034004DE7D4 /* TripViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273391BF07034004DE7D4 /* ScheduleViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C262733C1BF07034004DE7D4 /* PackViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262733E1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
-		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; settings = {ASSET_TAGS = (); }; };
+		C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C262731A1BF07034004DE7D4 /* AppDelegate.m */; };
+		C26273401BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731D1BF07034004DE7D4 /* beizhu.txt */; };
+		C26273411BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731F1BF07034004DE7D4 /* beizhu.txt */; };
+		C26273421BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273211BF07034004DE7D4 /* beizhu.txt */; };
+		C26273431BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273231BF07034004DE7D4 /* beizhu.txt */; };
+		C26273441BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273251BF07034004DE7D4 /* beizhu.txt */; };
+		C26273451BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273271BF07034004DE7D4 /* beizhu.txt */; };
+		C26273461BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273291BF07034004DE7D4 /* beizhu.txt */; };
+		C26273471BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262732C1BF07034004DE7D4 /* beizhu.txt */; };
+		C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273331BF07034004DE7D4 /* TrailViewController.m */; };
+		C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273361BF07034004DE7D4 /* TripViewController.m */; };
+		C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273391BF07034004DE7D4 /* ScheduleViewController.m */; };
+		C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C262733C1BF07034004DE7D4 /* PackViewController.m */; };
+		C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262733E1BF07034004DE7D4 /* beizhu.txt */; };
+		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; };
+		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; };
 		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
-		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; settings = {ASSET_TAGS = (); }; };
+		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		215991571BF222FD0009EF24 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = "../../Scenes/ViewController/主页面/bubble.png"; sourceTree = "<group>"; };
+		215991581BF222FD0009EF24 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = love.png; path = "../../Scenes/ViewController/主页面/love.png"; sourceTree = "<group>"; };
+		215991591BF222FD0009EF24 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2159915A1BF222FD0009EF24 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = "../../../../Scenes/ViewController/主页面/MyCell.h"; sourceTree = "<group>"; };
+		2159915B1BF222FD0009EF24 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = "../../../../Scenes/ViewController/主页面/MyCell.m"; sourceTree = "<group>"; };
+		2159915C1BF222FD0009EF24 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyCell.xib; path = "../../../../Scenes/ViewController/主页面/MyCell.xib"; sourceTree = "<group>"; };
+		2159915D1BF222FD0009EF24 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "../../Scenes/ViewController/主页面/UIView+Genie.h"; sourceTree = "<group>"; };
+		2159915E1BF222FD0009EF24 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "../../Scenes/ViewController/主页面/UIView+Genie.m"; sourceTree = "<group>"; };
+		2159915F1BF222FD0009EF24 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		215991601BF222FD0009EF24 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C213D4D11BF1D48D0000535D /* Trail_DownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_DownCell.h; sourceTree = "<group>"; };
 		C213D4D21BF1D48D0000535D /* Trail_DownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_DownCell.m; sourceTree = "<group>"; };
 		C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_DownCell.xib; sourceTree = "<group>"; };
@@ -57,7 +72,6 @@
 		C213D4EA1BF1F1BB0000535D /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUIJI_LIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26272FE1BF07015004DE7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C26273071BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C262730A1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GUIJI_LIFE.xcdatamodel; sourceTree = "<group>"; };
 		C262730C1BF07015004DE7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C262730F1BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +86,6 @@
 		C26273271BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
 		C26273291BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = beizhu.txt; path = ../beizhu.txt; sourceTree = "<group>"; };
 		C262732C1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
-		C262732F1BF07034004DE7D4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		C26273301BF07034004DE7D4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C26273321BF07034004DE7D4 /* TrailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailViewController.h; sourceTree = "<group>"; };
 		C26273331BF07034004DE7D4 /* TrailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailViewController.m; sourceTree = "<group>"; };
 		C26273351BF07034004DE7D4 /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
@@ -103,9 +115,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215991681BF223810009EF24 /* 主页面 */ = {
+			isa = PBXGroup;
+			children = (
+				2159915A1BF222FD0009EF24 /* MyCell.h */,
+				2159915B1BF222FD0009EF24 /* MyCell.m */,
+				2159915C1BF222FD0009EF24 /* MyCell.xib */,
+			);
+			path = "主页面";
+			sourceTree = "<group>";
+		};
+		215991691BF223EB0009EF24 /* 主页面抽屉 */ = {
+			isa = PBXGroup;
+			children = (
+				2159915D1BF222FD0009EF24 /* UIView+Genie.h */,
+				2159915E1BF222FD0009EF24 /* UIView+Genie.m */,
+			);
+			path = "主页面抽屉";
+			sourceTree = "<group>";
+		};
 		C213D4CF1BF1D48D0000535D /* 自定义cell */ = {
 			isa = PBXGroup;
 			children = (
+				215991681BF223810009EF24 /* 主页面 */,
 				C213D4D01BF1D48D0000535D /* 系统自动生成页面 */,
 				C213D4E01BF1E9780000535D /* 行囊页面 */,
 			);
@@ -132,6 +164,8 @@
 				C213D4EA1BF1F1BB0000535D /* Background.jpg */,
 				C213D4E61BF1EE370000535D /* PackTimeShaft.png */,
 				C213D4DD1BF1D4C30000535D /* TrailTimeShaft.png */,
+				215991571BF222FD0009EF24 /* bubble.png */,
+				215991581BF222FD0009EF24 /* love.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -310,9 +344,9 @@
 		C262732E1BF07034004DE7D4 /* 主页面 */ = {
 			isa = PBXGroup;
 			children = (
-				C26273061BF07015004DE7D4 /* Main.storyboard */,
-				C262732F1BF07034004DE7D4 /* HomeViewController.h */,
-				C26273301BF07034004DE7D4 /* HomeViewController.m */,
+				215991591BF222FD0009EF24 /* Main.storyboard */,
+				2159915F1BF222FD0009EF24 /* ViewController.h */,
+				215991601BF222FD0009EF24 /* ViewController.m */,
 			);
 			path = "主页面";
 			sourceTree = "<group>";
@@ -356,6 +390,7 @@
 		C262733D1BF07034004DE7D4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				215991691BF223EB0009EF24 /* 主页面抽屉 */,
 				C262733E1BF07034004DE7D4 /* beizhu.txt */,
 			);
 			path = Vendors;
@@ -412,7 +447,7 @@
 				TargetAttributes = {
 					C26272F91BF07015004DE7D4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = RHFEFUNF6U;
+						DevelopmentTeam = 9NX2ZCM4QL;
 					};
 				};
 			};
@@ -439,15 +474,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215991631BF222FD0009EF24 /* Main.storyboard in Resources */,
 				C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */,
+				215991621BF222FD0009EF24 /* love.png in Resources */,
+				215991651BF222FD0009EF24 /* MyCell.xib in Resources */,
 				C213D4DF1BF1D4C30000535D /* TrailTimeShaft.png in Resources */,
 				C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */,
 				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
 				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
-				C26273081BF07015004DE7D4 /* Main.storyboard in Resources */,
 				C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */,
 				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273431BF07034004DE7D4 /* beizhu.txt in Resources */,
+				215991611BF222FD0009EF24 /* bubble.png in Resources */,
 				C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */,
 				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
@@ -471,32 +509,25 @@
 				C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */,
 				C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */,
 				C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */,
+				215991661BF222FD0009EF24 /* UIView+Genie.m in Sources */,
 				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
 				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
 				C213D4E41BF1E9A60000535D /* PackCell.m in Sources */,
 				C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */,
+				215991671BF222FD0009EF24 /* ViewController.m in Sources */,
 				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
 				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
-				C26273481BF07034004DE7D4 /* HomeViewController.m in Sources */,
 				C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */,
+				215991641BF222FD0009EF24 /* MyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C26273061BF07015004DE7D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C26273071BF07015004DE7D4 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../../../..;
-			sourceTree = "<group>";
-		};
 		C262730E1BF07015004DE7D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -595,12 +626,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = GUIJI_LIFE/GUIJI_PrefixHeader.pch;
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "lanou.3g.com.GUIJI-LIFE";
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi0000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -609,12 +642,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = GUIJI_LIFE/GUIJI_PrefixHeader.pch;
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "lanou.3g.com.GUIJI-LIFE";
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi0000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
