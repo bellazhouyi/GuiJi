@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C26272FF1BF07015004DE7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C26272FE1BF07015004DE7D4 /* main.m */; };
+		C26273081BF07015004DE7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26273061BF07015004DE7D4 /* Main.storyboard */; };
+		C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
+		C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C262730C1BF07015004DE7D4 /* Assets.xcassets */; };
+		C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C262730E1BF07015004DE7D4 /* LaunchScreen.storyboard */; };
+		C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C262731A1BF07034004DE7D4 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		C26273401BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731D1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273411BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262731F1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273421BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273211BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273431BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273231BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273441BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273251BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273451BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273271BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273461BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273291BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273471BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262732C1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273481BF07034004DE7D4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273301BF07034004DE7D4 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273331BF07034004DE7D4 /* TrailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273361BF07034004DE7D4 /* TripViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273391BF07034004DE7D4 /* ScheduleViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C262733C1BF07034004DE7D4 /* PackViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262733E1BF07034004DE7D4 /* beizhu.txt */; settings = {ASSET_TAGS = (); }; };
+		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; settings = {ASSET_TAGS = (); }; };
+		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUIJI_LIFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26272FE1BF07015004DE7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C26273071BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C262730A1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GUIJI_LIFE.xcdatamodel; sourceTree = "<group>"; };
+		C262730C1BF07015004DE7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C262730F1BF07015004DE7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C26273111BF07015004DE7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26273191BF07034004DE7D4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C262731A1BF07034004DE7D4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C262731D1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C262731F1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273211BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273231BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273251BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273271BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C26273291BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C262732C1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C262732F1BF07034004DE7D4 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C26273301BF07034004DE7D4 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C26273321BF07034004DE7D4 /* TrailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailViewController.h; sourceTree = "<group>"; };
+		C26273331BF07034004DE7D4 /* TrailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailViewController.m; sourceTree = "<group>"; };
+		C26273351BF07034004DE7D4 /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
+		C26273361BF07034004DE7D4 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
+		C26273381BF07034004DE7D4 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		C26273391BF07034004DE7D4 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		C262733B1BF07034004DE7D4 /* PackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackViewController.h; sourceTree = "<group>"; };
+		C262733C1BF07034004DE7D4 /* PackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackViewController.m; sourceTree = "<group>"; };
+		C262733E1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
+		C262734F1BF0926D004DE7D4 /* MapInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MapInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MapInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C26273511BF0926D004DE7D4 /* MapInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfo.h; sourceTree = "<group>"; };
+		C26273521BF0926D004DE7D4 /* MapInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfo.m; sourceTree = "<group>"; };
+		C26273551BF0929B004DE7D4 /* GUIJI_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUIJI_PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C26272F71BF07015004DE7D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C26272F11BF07015004DE7D4 = {
+			isa = PBXGroup;
+			children = (
+				C26272FC1BF07015004DE7D4 /* GUIJI_LIFE */,
+				C26272FB1BF07015004DE7D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C26272FB1BF07015004DE7D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C26272FC1BF07015004DE7D4 /* GUIJI_LIFE */ = {
+			isa = PBXGroup;
+			children = (
+				C26273171BF07034004DE7D4 /* Classes */,
+				C262730C1BF07015004DE7D4 /* Assets.xcassets */,
+				C262730E1BF07015004DE7D4 /* LaunchScreen.storyboard */,
+				C26273111BF07015004DE7D4 /* Info.plist */,
+				C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */,
+				C26272FD1BF07015004DE7D4 /* Supporting Files */,
+			);
+			path = GUIJI_LIFE;
+			sourceTree = "<group>";
+		};
+		C26272FD1BF07015004DE7D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C26272FE1BF07015004DE7D4 /* main.m */,
+				C26273551BF0929B004DE7D4 /* GUIJI_PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C26273171BF07034004DE7D4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C26273181BF07034004DE7D4 /* AppDelegate */,
+				C262731B1BF07034004DE7D4 /* General */,
+				C26273221BF07034004DE7D4 /* Helpers */,
+				C26273241BF07034004DE7D4 /* Macro */,
+				C26273261BF07034004DE7D4 /* Models */,
+				C26273281BF07034004DE7D4 /* Resources */,
+				C262732A1BF07034004DE7D4 /* Scenes */,
+				C262733D1BF07034004DE7D4 /* Vendors */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C26273181BF07034004DE7D4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C26273191BF07034004DE7D4 /* AppDelegate.h */,
+				C262731A1BF07034004DE7D4 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C262731B1BF07034004DE7D4 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C262731C1BF07034004DE7D4 /* Categories */,
+				C262731E1BF07034004DE7D4 /* ViewControllers */,
+				C26273201BF07034004DE7D4 /* Views */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		C262731C1BF07034004DE7D4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C262731D1BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C262731E1BF07034004DE7D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C262731F1BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C26273201BF07034004DE7D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C26273211BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C26273221BF07034004DE7D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C26273231BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C26273241BF07034004DE7D4 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C26273251BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		C26273261BF07034004DE7D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C262734E1BF0921F004DE7D4 /* 系统自动生成的地图信息 */,
+				C26273271BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C26273281BF07034004DE7D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C26273291BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C262732A1BF07034004DE7D4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C262732B1BF07034004DE7D4 /* View */,
+				C262732D1BF07034004DE7D4 /* ViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C262732B1BF07034004DE7D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C262732C1BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C262732D1BF07034004DE7D4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C262732E1BF07034004DE7D4 /* 主页面 */,
+				C26273311BF07034004DE7D4 /* 系统自动生成页面 */,
+				C26273341BF07034004DE7D4 /* 自定义日程展示页面 */,
+				C26273371BF07034004DE7D4 /* 自定义日程输入页面 */,
+				C262733A1BF07034004DE7D4 /* 行囊页面 */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C262732E1BF07034004DE7D4 /* 主页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C26273061BF07015004DE7D4 /* Main.storyboard */,
+				C262732F1BF07034004DE7D4 /* HomeViewController.h */,
+				C26273301BF07034004DE7D4 /* HomeViewController.m */,
+			);
+			path = "主页面";
+			sourceTree = "<group>";
+		};
+		C26273311BF07034004DE7D4 /* 系统自动生成页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C26273321BF07034004DE7D4 /* TrailViewController.h */,
+				C26273331BF07034004DE7D4 /* TrailViewController.m */,
+			);
+			path = "系统自动生成页面";
+			sourceTree = "<group>";
+		};
+		C26273341BF07034004DE7D4 /* 自定义日程展示页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C26273351BF07034004DE7D4 /* TripViewController.h */,
+				C26273361BF07034004DE7D4 /* TripViewController.m */,
+			);
+			path = "自定义日程展示页面";
+			sourceTree = "<group>";
+		};
+		C26273371BF07034004DE7D4 /* 自定义日程输入页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C26273381BF07034004DE7D4 /* ScheduleViewController.h */,
+				C26273391BF07034004DE7D4 /* ScheduleViewController.m */,
+			);
+			path = "自定义日程输入页面";
+			sourceTree = "<group>";
+		};
+		C262733A1BF07034004DE7D4 /* 行囊页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C262733B1BF07034004DE7D4 /* PackViewController.h */,
+				C262733C1BF07034004DE7D4 /* PackViewController.m */,
+			);
+			path = "行囊页面";
+			sourceTree = "<group>";
+		};
+		C262733D1BF07034004DE7D4 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				C262733E1BF07034004DE7D4 /* beizhu.txt */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		C262734E1BF0921F004DE7D4 /* 系统自动生成的地图信息 */ = {
+			isa = PBXGroup;
+			children = (
+				C262734F1BF0926D004DE7D4 /* MapInfo+CoreDataProperties.h */,
+				C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */,
+				C26273511BF0926D004DE7D4 /* MapInfo.h */,
+				C26273521BF0926D004DE7D4 /* MapInfo.m */,
+			);
+			path = "系统自动生成的地图信息";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C26272F91BF07015004DE7D4 /* GUIJI_LIFE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C26273141BF07015004DE7D4 /* Build configuration list for PBXNativeTarget "GUIJI_LIFE" */;
+			buildPhases = (
+				C26272F61BF07015004DE7D4 /* Sources */,
+				C26272F71BF07015004DE7D4 /* Frameworks */,
+				C26272F81BF07015004DE7D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GUIJI_LIFE;
+			productName = GUIJI_LIFE;
+			productReference = C26272FA1BF07015004DE7D4 /* GUIJI_LIFE.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C26272F21BF07015004DE7D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "周屹";
+				TargetAttributes = {
+					C26272F91BF07015004DE7D4 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = RHFEFUNF6U;
+					};
+				};
+			};
+			buildConfigurationList = C26272F51BF07015004DE7D4 /* Build configuration list for PBXProject "GUIJI_LIFE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C26272F11BF07015004DE7D4;
+			productRefGroup = C26272FB1BF07015004DE7D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C26272F91BF07015004DE7D4 /* GUIJI_LIFE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C26272F81BF07015004DE7D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */,
+				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
+				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
+				C26273081BF07015004DE7D4 /* Main.storyboard in Resources */,
+				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273431BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273451BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273471BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273411BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273441BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26273461BF07034004DE7D4 /* beizhu.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C26272F61BF07015004DE7D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */,
+				C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */,
+				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
+				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
+				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
+				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
+				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
+				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
+				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
+				C26273481BF07034004DE7D4 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C26273061BF07015004DE7D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26273071BF07015004DE7D4 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ../../../..;
+			sourceTree = "<group>";
+		};
+		C262730E1BF07015004DE7D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C262730F1BF07015004DE7D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C26273121BF07015004DE7D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C26273131BF07015004DE7D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C26273151BF07015004DE7D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = GUIJI_LIFE/GUIJI_PrefixHeader.pch;
+				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lanou.3g.com.GUIJI-LIFE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C26273161BF07015004DE7D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = GUIJI_LIFE/GUIJI_PrefixHeader.pch;
+				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lanou.3g.com.GUIJI-LIFE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C26272F51BF07015004DE7D4 /* Build configuration list for PBXProject "GUIJI_LIFE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26273121BF07015004DE7D4 /* Debug */,
+				C26273131BF07015004DE7D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C26273141BF07015004DE7D4 /* Build configuration list for PBXNativeTarget "GUIJI_LIFE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26273151BF07015004DE7D4 /* Debug */,
+				C26273161BF07015004DE7D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C262730A1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodel */,
+			);
+			currentVersion = C262730A1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodel */;
+			path = GUIJI_LIFE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C26272F21BF07015004DE7D4 /* Project object */;
+}
