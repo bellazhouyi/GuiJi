@@ -59,7 +59,8 @@ typedef void (^block) (void);
 // 设置抽屉 边缘
 @property (nonatomic,assign) CGRect endRect;
 
-
+// 第一次指示气泡(判断是否是第一次)
+@property (nonatomic,assign) BOOL first;
 
 @end
 
@@ -88,9 +89,13 @@ static NSString *const cellID = @"mycell";
     [self.lineView addGestureRecognizer:tap1];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MyCell" bundle:nil] forCellReuseIdentifier:cellID];
+    
+    // tableview设置代理
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
+    
+    
 }
 
 // 返回
@@ -212,22 +217,12 @@ static NSString *const cellID = @"mycell";
                     
                 }];
             }];
-            
-        
-        
-        
-        
+    
     }
 
     self.viewIsIn = ! self.viewIsIn;
     
 }
-
-
-
-
-
-
 
 // 毛玻璃消失
 - (void)tapAction
@@ -248,7 +243,11 @@ static NSString *const cellID = @"mycell";
 
 }
 
-
+// 分区个数
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 // cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -261,6 +260,42 @@ static NSString *const cellID = @"mycell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    
+    // 第一次进入 第一个cell显示提示
+//    if (indexPath.row == 0 && self.first == NO) {
+//
+//            cell.bubbleimage.hidden = NO;
+//            cell.namelabel.text = @"在这里添加日程";
+//            self.first = YES;
+//
+//    }
+//    else
+//    {
+//        cell.bubbleimage.hidden = YES;
+//        cell.namelabel.text = @"";
+//    }
+    
+    if (self.first == NO) {
+        
+        if (indexPath.row == 0) {
+            cell.bubbleimage.hidden = NO;
+            cell.namelabel.text = @"在这里添加日程";
+        }
+        else
+        {
+            cell.bubbleimage.hidden = YES;
+            cell.namelabel.text = @"";
+        }
+        self.first = YES;
+        
+    }
+    else
+    {
+        //cell.bubbleimage.hidden = NO;
+
+        return cell;
+    }
+    
     
     
     return cell;
@@ -295,10 +330,19 @@ static NSString *const cellID = @"mycell";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    // 获取cell
     MyCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    cell.namelabel.text = @"ttttttttttt";
-    
+    // 如果namelabel 为空 点击无效果
+    if ([cell.namelabel.text isEqualToString:@""]) {
+        return;
+    }
+    else
+    {
+        // 如果namelabel 不为空 弹出/收起 抽屉
+        [cell genieToRect:cell.leftButton.frame edge:BCRectEdgeRight];
+    }
     
 }
 

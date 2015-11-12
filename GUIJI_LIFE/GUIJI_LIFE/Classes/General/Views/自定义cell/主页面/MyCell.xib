@@ -26,8 +26,8 @@
                         <rect key="frame" x="70" y="5" width="274" height="166"/>
                         <animations/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-7d-Qvq">
-                        <rect key="frame" x="70" y="5" width="279" height="161"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-7d-Qvq">
+                        <rect key="frame" x="90" y="5" width="259" height="161"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-jX-SZA">
-                        <rect key="frame" x="10" y="10" width="55" height="155"/>
+                        <rect key="frame" x="10" y="10" width="75" height="155"/>
                         <animations/>
                         <state key="normal" title="Button"/>
                         <connections>
@@ -44,22 +44,78 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qV-Tp-LPu">
-                        <rect key="frame" x="70" y="0.0" width="274" height="176"/>
+                        <rect key="frame" x="90" y="0.0" width="254" height="176"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="添加时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-84-21H">
-                                <rect key="frame" x="0.0" y="0.0" width="274" height="176"/>
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="141"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q27-iu-w8r">
+                                <rect key="frame" x="8" y="143" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="ClockAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="JT4-t6-TxP"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWk-F3-Okc">
+                                <rect key="frame" x="169" y="142" width="80" height="33"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.2828922176" green="0.58236794489999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="D5h-rr-zSn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNg-3J-c4H">
+                                <rect key="frame" x="172" y="141" width="72" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.2828922176" green="0.58236794489999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="添加完成">
+                                    <color key="titleColor" red="0.85146385729999996" green="0.27982214693131335" blue="0.11232705594059465" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDownAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0vC-36-LIh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="闹钟提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-Mq-Slu">
+                                <rect key="frame" x="67" y="141" width="100" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="slM-TK-Izr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.42745098040000001" green="0.81176470590000005" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="dYt-84-21H" secondAttribute="bottom" id="2Eu-wj-gRe"/>
+                            <constraint firstAttribute="bottom" secondItem="dYt-84-21H" secondAttribute="bottom" constant="35" id="2Eu-wj-gRe"/>
+                            <constraint firstItem="q27-iu-w8r" firstAttribute="leading" secondItem="3qV-Tp-LPu" secondAttribute="leading" constant="8" id="4fm-R7-c5f"/>
+                            <constraint firstAttribute="bottom" secondItem="q27-iu-w8r" secondAttribute="bottom" constant="2" id="CyF-XR-a4C"/>
+                            <constraint firstItem="sfl-Mq-Slu" firstAttribute="leading" secondItem="q27-iu-w8r" secondAttribute="trailing" constant="10" id="ROU-WH-Kdp"/>
                             <constraint firstItem="dYt-84-21H" firstAttribute="top" secondItem="3qV-Tp-LPu" secondAttribute="top" id="RXl-Ca-SZn"/>
+                            <constraint firstAttribute="trailing" secondItem="QNg-3J-c4H" secondAttribute="trailing" constant="10" id="VfT-dN-bmx"/>
+                            <constraint firstItem="sfl-Mq-Slu" firstAttribute="top" secondItem="dYt-84-21H" secondAttribute="bottom" id="Vz9-lv-Xkh"/>
+                            <constraint firstItem="NWk-F3-Okc" firstAttribute="width" secondItem="QNg-3J-c4H" secondAttribute="width" id="W7Y-el-Ab8"/>
+                            <constraint firstItem="NWk-F3-Okc" firstAttribute="top" secondItem="dYt-84-21H" secondAttribute="bottom" constant="1" id="X8i-Ql-c9r"/>
+                            <constraint firstAttribute="trailing" secondItem="NWk-F3-Okc" secondAttribute="trailing" constant="5" id="Xfe-Jw-5yP"/>
+                            <constraint firstItem="q27-iu-w8r" firstAttribute="top" secondItem="dYt-84-21H" secondAttribute="bottom" constant="2" id="brA-Oe-FGw"/>
+                            <constraint firstAttribute="bottom" secondItem="QNg-3J-c4H" secondAttribute="bottom" id="f53-0b-O2c"/>
                             <constraint firstAttribute="trailing" secondItem="dYt-84-21H" secondAttribute="trailing" id="h6k-Ak-Q7u"/>
                             <constraint firstItem="dYt-84-21H" firstAttribute="leading" secondItem="3qV-Tp-LPu" secondAttribute="leading" id="rKC-Hd-OwK"/>
+                            <constraint firstAttribute="bottom" secondItem="NWk-F3-Okc" secondAttribute="bottom" constant="1" id="tgQ-tK-bK4"/>
+                            <constraint firstAttribute="bottom" secondItem="sfl-Mq-Slu" secondAttribute="bottom" id="uCk-8J-r0a"/>
+                            <constraint firstItem="QNg-3J-c4H" firstAttribute="top" secondItem="dYt-84-21H" secondAttribute="bottom" id="uI1-Bx-Vrb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -67,11 +123,16 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W7Y-el-Ab8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="dzM-7d-Qvq" firstAttribute="leading" secondItem="1lu-Vy-4Jl" secondAttribute="trailing" constant="10" id="300-f5-kYs"/>
+                    <constraint firstItem="dzM-7d-Qvq" firstAttribute="leading" secondItem="1lu-Vy-4Jl" secondAttribute="trailing" constant="30" id="300-f5-kYs"/>
                     <constraint firstItem="Qo1-cN-m2p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="99S-lN-E50"/>
                     <constraint firstAttribute="trailing" secondItem="dzM-7d-Qvq" secondAttribute="trailing" constant="5" id="9wE-w9-DVa"/>
                     <constraint firstItem="3qV-Tp-LPu" firstAttribute="leading" secondItem="Kql-jX-SZA" secondAttribute="trailing" constant="5" id="Cx7-gT-35d"/>
@@ -95,6 +156,11 @@
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="addButton" destination="QNg-3J-c4H" id="9G4-Bw-wtd"/>
+                <outlet property="addTextField" destination="dYt-84-21H" id="t3s-8A-ORF"/>
+                <outlet property="bubbleimage" destination="Qo1-cN-m2p" id="Pn0-Dc-ynT"/>
+                <outlet property="clockLabel" destination="sfl-Mq-Slu" id="wel-q5-k8m"/>
+                <outlet property="clockSwitch" destination="q27-iu-w8r" id="r8O-JD-2qi"/>
                 <outlet property="imView" destination="Qo1-cN-m2p" id="3uj-PS-vB2"/>
                 <outlet property="imgView" destination="1lu-Vy-4Jl" id="Kab-9O-QAc"/>
                 <outlet property="leftBox" destination="3qV-Tp-LPu" id="Eeg-rM-SzE"/>
