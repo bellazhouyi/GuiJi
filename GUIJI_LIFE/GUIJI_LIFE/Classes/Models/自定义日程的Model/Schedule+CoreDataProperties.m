@@ -17,5 +17,7 @@
 @dynamic hour;
 @dynamic isClock;
 @dynamic minute;
+@dynamic isShow;
+@dynamic showBox;
 
 @end

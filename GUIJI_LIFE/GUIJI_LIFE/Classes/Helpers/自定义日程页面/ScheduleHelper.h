@@ -28,7 +28,7 @@
 
 
 #pragma mark 保存数据
-- (void)saveDataWithHour:(NSNumber *)hour content:(NSString *)content isClock:(BOOL)isColock;
+- (void)saveDataWithHour:(NSNumber *)hour content:(NSString *)content isClock:(BOOL)isColock isShow:(BOOL)isShow showBox:(BOOL)showBox;
 
 
 @end

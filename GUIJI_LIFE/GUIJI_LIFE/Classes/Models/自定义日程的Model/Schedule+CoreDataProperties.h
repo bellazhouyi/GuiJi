@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *hour;
 @property (nullable, nonatomic, retain) NSNumber *isClock;
 @property (nullable, nonatomic, retain) NSNumber *minute;
+@property (nullable, nonatomic, retain) NSNumber *isShow;
+@property (nullable, nonatomic, retain) NSNumber *showBox;
 
 @end
 

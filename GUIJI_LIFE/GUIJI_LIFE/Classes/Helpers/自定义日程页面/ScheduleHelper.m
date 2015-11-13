@@ -10,9 +10,6 @@
 
 @interface ScheduleHelper ()
 
-// 声明appdelegate属性
-//@property (nonatomic,strong) AppDelegate *appDelegate;
-
 
 @end
 
@@ -45,22 +42,27 @@
         if (_scheduleArray.count == 0)
         {
             
-            BOOL clock = NO;
-            
+
             for (int i = 6;  i < 26; i += 2) {
                 
 
-                
-                [self saveDataWithHour:[NSNumber numberWithInt:i] content:@"" isClock:clock];
-                
-                clock = !clock;
+                if (i == 6) {
+                    
+                    // 给第一个气泡添加提醒 
+                    [self saveDataWithHour:[NSNumber numberWithInt:i] content:@"这里添加日程" isClock:NO isShow:YES showBox:NO];
+                }
+                else
+                {
+                    
+                    [self saveDataWithHour:[NSNumber numberWithInt:i] content:@"" isClock:NO isShow:NO showBox:NO];
+                }
                 
              }
 
-            
+            // 如果是空 就获取数据
+            _scheduleArray = [self gainAllData];
        }
         
-        _scheduleArray = [self gainAllData];
         
         NSLog(@"---%@",_scheduleArray);
         
@@ -73,7 +75,7 @@
 
 
 #pragma  mark - 存储模型
-- (void)saveDataWithHour:(NSNumber *)hour content:(NSString *)content isClock:(BOOL)isColock
+- (void)saveDataWithHour:(NSNumber *)hour content:(NSString *)content isClock:(BOOL)isColock isShow:(BOOL)isShow showBox:(BOOL)showBox
 {
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Schedule" inManagedObjectContext:self.appDelegate.managedObjectContext] ;
     
@@ -85,7 +87,8 @@
     schedule.hour = hour;
     schedule.content = content;
     schedule.isClock = [NSNumber numberWithBool:isColock];
-    
+    schedule.isShow = [NSNumber numberWithBool:isShow];
+    schedule.showBox = [NSNumber numberWithBool:showBox];
     
     // 保存并更新
     [self.appDelegate saveContext];
@@ -131,9 +134,6 @@
 
 
 
-
-
-
 #pragma mark 根据小时取数据
 - (Schedule *)gainDataWithHour:(NSNumber *)hour
 {
@@ -161,17 +161,7 @@
     return [fetchedObjects firstObject];
 }
 
-#pragma  mark - 更新数据库
 
-- (void)updateDataWithSchedule:(Schedule *)schedule
-{
-    // 查找到要修改的学生
-    
-    // 保存一下操作
-    NSError *error = nil;
-    [self.appDelegate.managedObjectContext save:&error];
-
-}
 
 #pragma mark 返回所有数据
 - (NSMutableArray *)scheduleArray

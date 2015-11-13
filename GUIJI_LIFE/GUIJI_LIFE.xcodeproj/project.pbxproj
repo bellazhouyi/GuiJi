@@ -48,7 +48,7 @@
 		C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1511BF22BD1008A9EBD /* UIView+Genie.m */; };
 		C296F1551BF22C1C008A9EBD /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1531BF22C1C008A9EBD /* bubble.png */; };
 		C296F1561BF22C1C008A9EBD /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1541BF22C1C008A9EBD /* love.png */; };
-		C2BCD6611BF58F04001AC6A6 /* ClockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BCD6601BF58F04001AC6A6 /* ClockHelper.m */; settings = {ASSET_TAGS = (); }; };
+		C2BCD6611BF58F04001AC6A6 /* ClockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BCD6601BF58F04001AC6A6 /* ClockHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -490,7 +490,7 @@
 				TargetAttributes = {
 					C26272F91BF07015004DE7D4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = RHFEFUNF6U;
+						DevelopmentTeam = 9NX2ZCM4QL;
 					};
 				};
 			};
@@ -678,7 +678,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -694,7 +694,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

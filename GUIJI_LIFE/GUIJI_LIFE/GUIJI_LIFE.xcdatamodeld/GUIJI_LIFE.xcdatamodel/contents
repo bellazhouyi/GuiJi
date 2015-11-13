@@ -8,10 +8,12 @@
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="isClock" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isShow" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="minute" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="showBox" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
         <element name="MapInfo" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Schedule" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Schedule" positionX="-54" positionY="9" width="128" height="135"/>
     </elements>
 </model>

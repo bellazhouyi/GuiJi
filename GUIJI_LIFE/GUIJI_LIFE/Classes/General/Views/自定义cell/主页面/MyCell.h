@@ -10,6 +10,9 @@
 #import "UIView+Genie.h"
 #import <QuartzCore/QuartzCore.h>
 
+// 传递时间给闹钟
+typedef void (^passTimeBlock)(NSString *);
+
 
 @interface MyCell : UITableViewCell
 
@@ -19,7 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
-
+// 弹出抽屉 button
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 
 @property (weak, nonatomic) IBOutlet UIView *leftBox;
@@ -44,8 +47,9 @@
 @property (nonatomic,strong) Schedule *schedule;
 // cell的标记
 @property (nonatomic,assign) NSInteger num;
-// 引入管理类
-//@property (nonatomic,strong) ScheduleHelper *scheduleHelper;
+
+// 传递time block
+@property (nonatomic,copy) passTimeBlock passTimeBlock;
 
 // setter方法
 - (void)setSchedule:(Schedule *)schedule;

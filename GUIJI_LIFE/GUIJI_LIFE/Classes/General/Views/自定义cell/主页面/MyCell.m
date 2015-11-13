@@ -20,6 +20,8 @@
 
 @implementation MyCell
 
+// button title 计数器
+static int hour = 6;
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -46,31 +48,24 @@
     }
     
     // 单例
-    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
+    ScheduleHelper *scheduleHelper = [ScheduleHelper sharedDatamanager];
+    
+    if ([[_schedule isClock] boolValue] == YES) {
+        
+    }
     
     
     
-    NSLog(@"%@",s.scheduleArray);
+    NSLog(@"%@",scheduleHelper.scheduleArray);
     // 把schedule模型保存进数据库
-    _schedule =  s.scheduleArray[self.num] ;
+    _schedule =  scheduleHelper.scheduleArray[self.num] ;
     
     // 接收闹钟开关的状态
     _schedule.isClock = [NSNumber numberWithBool:self.clockSwitch.on];
     
-    [s.appDelegate.managedObjectContext save:nil];
+    [scheduleHelper.appDelegate.managedObjectContext save:nil];
     
-    //判断数据库中保存的值是否是允许开启闹钟功能
-    if ([[_schedule isClock] boolValue] == YES) {
-        
-        //得到时间
-        NSString *hour = [NSString stringWithFormat:@"%@",[_schedule hour]];
-        //得到内容
-        NSString *content = [_schedule content];
-        
-        //是的话，就写一个通知
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"clock" object:nil userInfo:@{@"hour":hour,@"content":content}];
-        
-    }
+    
     
     
 }
@@ -79,7 +74,10 @@
 // 添加完成
 - (IBAction)addDownAction:(UIButton *)sender {
     
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
     
+    _schedule = s.scheduleArray[self.num];
+
     
     // 把文本框内容给cell
     
@@ -93,24 +91,25 @@
         
         self.bubbleimage.hidden = YES;
         
+        // 如果隐藏那么 isShow = NO;
+        _schedule.isShow = [NSNumber numberWithBool:NO];
     }
     else
     {
         self.bubbleimage.hidden = NO;
+        
+        // 如果不隐藏 那么isShow = YES;
+        _schedule.isShow = [NSNumber numberWithBool:YES];
     }
     
-    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
-    
-    _schedule = s.scheduleArray[self.num];
-    
+
     // 保存namelabel 给 content
     _schedule.content = self.addTextField.text;
+    
 
-    
-    
+    // 保存修改
     NSError *error = nil;
-    
-    
+
     [s.appDelegate.managedObjectContext save:&error];
 
     
@@ -122,6 +121,10 @@
 // 点击按钮 弹出左抽屉
 - (IBAction)leftButtonAction:(UIButton *)sender {
     
+    
+    
+    
+    NSLog(@"%ld",self.num);
 
     // 弹出 / 收起抽屉方法
     [self genieToRect:sender.frame edge:BCRectEdgeRight];
@@ -132,8 +135,14 @@
 // 弹出/收起 抽屉
 - (void) genieToRect: (CGRect)rect edge: (BCRectEdge) edge
 {
+    // 单例
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
     
+    // 获取 cell的 索引
+    _schedule = s.scheduleArray[self.num];
+
     
+    // 设置抽屉 边缘
     CGRect endRect = CGRectInset(rect,self.leftButton.frame.size.width / 2 - 1,self.leftButton.frame.size.height / 2 - 1);
     
     
@@ -146,7 +155,6 @@
         [self.leftBox genieInTransitionWithDuration:0.8 destinationRect:endRect destinationEdge:edge completion:
          ^{
 
-             
              // 把文本框内容给cell
 
              self.namelabel.text = self.addTextField.text;
@@ -159,6 +167,8 @@
              }];
          }];
         
+        // 抽屉收起 showBox = NO;
+        _schedule.showBox = [NSNumber numberWithBool:NO];
         
         
     }
@@ -182,7 +192,14 @@
                 
             }];
         }];
+        // 抽屉弹出  showBox = YES;
+        _schedule.showBox = [NSNumber numberWithBool:YES];
     }
+    
+    // 保存修改
+    NSError *error = nil;
+    
+    [s.appDelegate.managedObjectContext save:&error];
     
     self.viewIsIn = ! self.viewIsIn;
     
@@ -193,12 +210,38 @@
 
 
 #pragma mark schedule 的 setter方法
+
 - (void)setSchedule:(Schedule *)schedule
 {
     self.namelabel.text = schedule.content;
     
     NSNumber *num = [NSNumber numberWithInt:1];
 
+    // 如果 showBox = Yes 就不隐藏
+    if ([schedule.showBox isEqualToNumber:num]) {
+        
+        self.leftBox.hidden = NO;
+    }
+    else
+    {
+        // 否则隐藏
+        self.leftBox.hidden = YES;
+    }
+
+    
+    
+    
+    // 如果 isShow = Yes 就不隐藏
+    if ([schedule.isShow isEqualToNumber:num]) {
+        
+        self.bubbleimage.hidden = NO;
+    }
+    else
+    {
+        // 否则隐藏
+        self.bubbleimage.hidden = YES;
+    }
+    
 
     
     if ([schedule.isClock isEqualToNumber:num]) {
@@ -219,14 +262,21 @@
 
 
 
-
 - (void)awakeFromNib {
 
-    // 设置leftBox首先隐藏
-    self.leftBox.hidden = YES;
+//    // 设置leftBox首先隐藏
+//    self.leftBox.hidden = YES;
+//    
+//    // 将气泡图片 隐藏 当没有文字时(没有添加日程)
+//    self.bubbleimage.hidden = YES;
     
-    // 将气泡图片 隐藏 当没有文字时(没有添加日程)
-    self.bubbleimage.hidden = YES;
+    
+    if (hour < 24) {
+        [self.leftButton setTitle:[NSString stringWithFormat:@"%d",hour += 2] forState:UIControlStateNormal];
+    }
+    
+    
+    
     
 }
 
