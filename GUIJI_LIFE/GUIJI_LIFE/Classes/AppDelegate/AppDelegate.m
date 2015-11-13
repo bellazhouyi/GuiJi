@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ClockHelper.h"
 //引入地图框架
 @import MapKit;
 
@@ -63,6 +63,27 @@
     self.locationManager.distanceFilter = 100;
     
     
+    
+#pragma mark - 关于闹钟的
+    //如果已经获得发送通知的授权则创建本地通知，否则请求授权(注意：如果不请求授权在设置中是没有对应的通知设置项的，也就是说如果从来没有发送过请求，即使通过设置也打不开消息允许设置)
+    if ([[UIApplication sharedApplication]currentUserNotificationSettings].types!=UIUserNotificationTypeNone) {
+        
+        ClockHelper *clockHelper = [ClockHelper new];
+        
+        //从家赫那个页面---数据库中有isClock这么一个Bool，表示是否有闹钟提醒
+        //用block传值--关于时间的形参，调用addLocalNotificationWithTime方法
+        
+        [clockHelper addLocalNotificationWithTime:@"" content:@""];
+        
+    }else{
+        [[UIApplication sharedApplication]registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound  categories:nil]];
+    }
+
+    
+    
+    
+    
+    
     return YES;
 }
 
@@ -109,7 +130,16 @@
     
 }
 
-
+#pragma mark 调用用户注册通知方法之后执行（也就是调用完registerUserNotificationSettings:方法之后执行）
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    if (notificationSettings.types!=UIUserNotificationTypeNone) {
+        
+        
+        ClockHelper *clockHelper = [ClockHelper new];
+        
+        [clockHelper addLocalNotificationWithTime:@"" content:@""];
+    }
+}
 
 
 
@@ -120,9 +150,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
    
 }
-
+#pragma mark 进入前台后设置消息信息
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-  
+  [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];//进入前台取消应用消息图标
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

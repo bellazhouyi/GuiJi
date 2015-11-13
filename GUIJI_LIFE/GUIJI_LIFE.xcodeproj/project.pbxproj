@@ -48,6 +48,7 @@
 		C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1511BF22BD1008A9EBD /* UIView+Genie.m */; };
 		C296F1551BF22C1C008A9EBD /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1531BF22C1C008A9EBD /* bubble.png */; };
 		C296F1561BF22C1C008A9EBD /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = C296F1541BF22C1C008A9EBD /* love.png */; };
+		C2BCD6611BF58F04001AC6A6 /* ClockHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BCD6601BF58F04001AC6A6 /* ClockHelper.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,8 @@
 		C296F1511BF22BD1008A9EBD /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		C296F1531BF22C1C008A9EBD /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		C296F1541BF22C1C008A9EBD /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = "<group>"; };
+		C2BCD65F1BF58F04001AC6A6 /* ClockHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockHelper.h; sourceTree = "<group>"; };
+		C2BCD6601BF58F04001AC6A6 /* ClockHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,7 @@
 		C26273221BF07034004DE7D4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C2BCD65E1BF58EC5001AC6A6 /* 闹钟管理类 */,
 				213B7E741BF58A9800ED8FBB /* 自定义日程页面 */,
 				C296F13F1BF1F381008A9EBD /* 系统自动生成页面 */,
 				C26273231BF07034004DE7D4 /* beizhu.txt */,
@@ -446,6 +450,15 @@
 			path = "主页面抽屉";
 			sourceTree = "<group>";
 		};
+		C2BCD65E1BF58EC5001AC6A6 /* 闹钟管理类 */ = {
+			isa = PBXGroup;
+			children = (
+				C2BCD65F1BF58F04001AC6A6 /* ClockHelper.h */,
+				C2BCD6601BF58F04001AC6A6 /* ClockHelper.m */,
+			);
+			path = "闹钟管理类";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +557,7 @@
 				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
 				2109FFCD1BF4243D0069339A /* MyCell.m in Sources */,
 				C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */,
+				C2BCD6611BF58F04001AC6A6 /* ClockHelper.m in Sources */,
 				213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
