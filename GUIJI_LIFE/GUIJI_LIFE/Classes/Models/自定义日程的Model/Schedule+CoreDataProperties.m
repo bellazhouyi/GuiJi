@@ -2,7 +2,7 @@
 //  Schedule+CoreDataProperties.m
 //  GUIJI_LIFE
 //
-//  Created by lanou3g on 15/11/11.
+//  Created by 邢家赫 on 15/11/13.
 //  Copyright © 2015年 周屹. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,9 +13,9 @@
 
 @implementation Schedule (CoreDataProperties)
 
-@dynamic hour;
-@dynamic minute;
 @dynamic content;
+@dynamic hour;
 @dynamic isClock;
+@dynamic minute;
 
 @end

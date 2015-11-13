@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		2109FFCD1BF4243D0069339A /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2109FFCB1BF4243D0069339A /* MyCell.m */; };
 		2109FFCE1BF4243D0069339A /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2109FFCC1BF4243D0069339A /* MyCell.xib */; };
-		2109FFD11BF424FB0069339A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2109FFD01BF424FB0069339A /* ViewController.m */; };
-		2109FFD31BF4255A0069339A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2109FFD21BF4255A0069339A /* Main.storyboard */; };
+		213B7E771BF58AC100ED8FBB /* ScheduleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 213B7E761BF58AC100ED8FBB /* ScheduleHelper.m */; };
+		213B7E7B1BF58B7200ED8FBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213B7E781BF58B7200ED8FBB /* Main.storyboard */; };
+		213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213B7E7A1BF58B7200ED8FBB /* ViewController.m */; };
 		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; };
 		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; };
 		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; };
@@ -53,9 +54,11 @@
 		2109FFCA1BF4243D0069339A /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		2109FFCB1BF4243D0069339A /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		2109FFCC1BF4243D0069339A /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
-		2109FFCF1BF424FB0069339A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2109FFD01BF424FB0069339A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2109FFD21BF4255A0069339A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		213B7E751BF58AC100ED8FBB /* ScheduleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleHelper.h; sourceTree = "<group>"; };
+		213B7E761BF58AC100ED8FBB /* ScheduleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleHelper.m; sourceTree = "<group>"; };
+		213B7E781BF58B7200ED8FBB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		213B7E791BF58B7200ED8FBB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		213B7E7A1BF58B7200ED8FBB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C213D4D11BF1D48D0000535D /* Trail_DownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_DownCell.h; sourceTree = "<group>"; };
 		C213D4D21BF1D48D0000535D /* Trail_DownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_DownCell.m; sourceTree = "<group>"; };
 		C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_DownCell.xib; sourceTree = "<group>"; };
@@ -121,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213B7E741BF58A9800ED8FBB /* 自定义日程页面 */ = {
+			isa = PBXGroup;
+			children = (
+				213B7E751BF58AC100ED8FBB /* ScheduleHelper.h */,
+				213B7E761BF58AC100ED8FBB /* ScheduleHelper.m */,
+			);
+			path = "自定义日程页面";
+			sourceTree = "<group>";
+		};
 		C213D4CF1BF1D48D0000535D /* 自定义cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +280,7 @@
 		C26273221BF07034004DE7D4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				213B7E741BF58A9800ED8FBB /* 自定义日程页面 */,
 				C296F13F1BF1F381008A9EBD /* 系统自动生成页面 */,
 				C26273231BF07034004DE7D4 /* beizhu.txt */,
 			);
@@ -332,9 +345,9 @@
 		C262732E1BF07034004DE7D4 /* 主页面 */ = {
 			isa = PBXGroup;
 			children = (
-				2109FFD21BF4255A0069339A /* Main.storyboard */,
-				2109FFCF1BF424FB0069339A /* ViewController.h */,
-				2109FFD01BF424FB0069339A /* ViewController.m */,
+				213B7E781BF58B7200ED8FBB /* Main.storyboard */,
+				213B7E791BF58B7200ED8FBB /* ViewController.h */,
+				213B7E7A1BF58B7200ED8FBB /* ViewController.m */,
 			);
 			path = "主页面";
 			sourceTree = "<group>";
@@ -496,7 +509,7 @@
 				2109FFCE1BF4243D0069339A /* MyCell.xib in Resources */,
 				C213D4EB1BF1F1BB0000535D /* Background.jpg in Resources */,
 				C26273101BF07015004DE7D4 /* LaunchScreen.storyboard in Resources */,
-				2109FFD31BF4255A0069339A /* Main.storyboard in Resources */,
+				213B7E7B1BF58B7200ED8FBB /* Main.storyboard in Resources */,
 				C262730D1BF07015004DE7D4 /* Assets.xcassets in Resources */,
 				C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */,
 				C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */,
@@ -523,7 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2109FFD11BF424FB0069339A /* ViewController.m in Sources */,
+				213B7E771BF58AC100ED8FBB /* ScheduleHelper.m in Sources */,
 				C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */,
 				C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */,
 				C262730B1BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Sources */,
@@ -531,6 +544,7 @@
 				C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */,
 				2109FFCD1BF4243D0069339A /* MyCell.m in Sources */,
 				C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */,
+				213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
 				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,

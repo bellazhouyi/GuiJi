@@ -13,9 +13,12 @@
 
 //引入Model类
 #import "MapInfo.h"
+#import "Schedule.h"
 
 //TrailVC界面引入的类
 #import "TrailHelper.h"
+
+#import "ScheduleHelper.h"
 
 //引入VC类
 #import "TrailViewController.h"

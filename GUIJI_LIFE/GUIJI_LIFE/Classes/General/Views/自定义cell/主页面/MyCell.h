@@ -40,5 +40,15 @@
 // 气泡图片
 @property (weak, nonatomic) IBOutlet UIImageView *bubbleimage;
 
+// 日程模型
+@property (nonatomic,strong) Schedule *schedule;
+// cell的标记
+@property (nonatomic,assign) NSInteger num;
+// 引入管理类
+//@property (nonatomic,strong) ScheduleHelper *scheduleHelper;
+
+// setter方法
+- (void)setSchedule:(Schedule *)schedule;
+
 
 @end

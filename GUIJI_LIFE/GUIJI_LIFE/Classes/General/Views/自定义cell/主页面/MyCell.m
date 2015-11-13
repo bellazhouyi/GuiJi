@@ -44,15 +44,36 @@
     {
         self.clockLabel.text = @"闹钟已关闭";
     }
-
+    
+    // 单例
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
+    
+    
+    
+    NSLog(@"%@",s.scheduleArray);
+    // 把schedule模型保存进数据库
+    _schedule =  s.scheduleArray[self.num] ;
+    
+    // 接收闹钟开关的状态
+    _schedule.isClock = [NSNumber numberWithBool:self.clockSwitch.on];
+    
+    [s.appDelegate.managedObjectContext save:nil];
+    
 }
 
 
 // 添加完成
 - (IBAction)addDownAction:(UIButton *)sender {
     
-    // 文本框内容给 cell
+    
+    
+    // 把文本框内容给cell
+    
     self.namelabel.text = self.addTextField.text;
+
+    // 收回抽屉
+    [self genieToRect:self.leftButton.frame edge:BCRectEdgeRight];
+    
     // 如果namelabel 不为空 就显示气泡图片
     if ([self.namelabel.text isEqualToString:@""]) {
         
@@ -64,21 +85,36 @@
         self.bubbleimage.hidden = NO;
     }
     
-    // 收回抽屉
-    [self genieToRect:self.leftButton.frame edge:BCRectEdgeRight];
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
+    
+    _schedule = s.scheduleArray[self.num];
+    
+    NSLog(@"wo:%ld",self.num);
+    // 保存namelabel 给 content
+    _schedule.content = self.addTextField.text;
+    NSLog(@"%@",self.addTextField.text);
+    NSLog(@"~~~%@",_schedule.content);
+
+    
+    
+    NSError *error = nil;
+    
+    
+    [s.appDelegate.managedObjectContext save:&error];
+
     
 }
 
 
 
 
-// 弹出左抽屉
+// 点击按钮 弹出左抽屉
 - (IBAction)leftButtonAction:(UIButton *)sender {
     
     
-    NSLog(@"aaaaaaaaaaa");
     
     
+    NSLog(@"%ld",self.num);
 
     // 弹出 / 收起抽屉方法
     [self genieToRect:sender.frame edge:BCRectEdgeRight];
@@ -108,7 +144,6 @@
 
              self.namelabel.text = self.addTextField.text;
              
-             
              [self.buttons enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
                  
                  button.enabled = YES;
@@ -125,6 +160,9 @@
         // 把cell内容给文本框
 
         self.addTextField.text = self.namelabel.text;
+        
+        
+        
         // 抽屉弹出
         // box一直存在,以前隐藏了 现在再显示
         self.leftBox.hidden = NO;
@@ -141,12 +179,35 @@
     
     self.viewIsIn = ! self.viewIsIn;
     
+
+    
 }
 
 
 
+#pragma mark schedule 的 setter方法
+- (void)setSchedule:(Schedule *)schedule
+{
+    self.namelabel.text = schedule.content;
+    
+    NSNumber *num = [NSNumber numberWithInt:1];
 
 
+    
+    if ([schedule.isClock isEqualToNumber:num]) {
+
+        self.clockSwitch.on = YES;
+    }
+    else
+    {
+        
+        self.clockSwitch.on = NO;
+    }
+    
+    
+    
+    
+}
 
 
 

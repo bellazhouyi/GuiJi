@@ -44,6 +44,8 @@ typedef void (^block) (void);
 // 毛玻璃
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *visualView;
 
+
+// 时间轴
 @property (weak, nonatomic) IBOutlet UIImageView *lineView;
 
 // 下抽屉
@@ -62,14 +64,36 @@ typedef void (^block) (void);
 // 第一次指示气泡(判断是否是第一次)
 @property (nonatomic,assign) BOOL first;
 
+// 所有日程数据数组
+@property (nonatomic,strong) NSMutableArray *dataArray;
+
+// 数据管理者
+@property (nonatomic,strong) ScheduleHelper *scheduleHelper;
+
+
 @end
 
 static NSString *const cellID = @"mycell";
 
 @implementation ViewController
 
+//- (void)loadView
+//{
+//    
+//    
+//    // 加载数据
+//    //s = [[ScheduleHelper alloc] init];
+//}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
+    
+    NSLog(@"scheduleArray : %@",s.scheduleArray);
+
+    
     
     // box隐藏
     self.buttons = @[_TopButton];
@@ -94,9 +118,16 @@ static NSString *const cellID = @"mycell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
+   
+    
     
     
 }
+
+    
+    
+
+
 
 // 返回
 - (IBAction)backAction:(UIButton *)sender {
@@ -121,6 +152,9 @@ static NSString *const cellID = @"mycell";
         NSLog(@"动画完成了");
         
     }];
+    
+    
+    
  
     
     
@@ -252,7 +286,9 @@ static NSString *const cellID = @"mycell";
 // cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return  10;
+    
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
+    return  s.scheduleArray.count;
 }
 
 
@@ -261,43 +297,36 @@ static NSString *const cellID = @"mycell";
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    // 第一次进入 第一个cell显示提示
-//    if (indexPath.row == 0 && self.first == NO) {
-//
+    
+//    if (self.first == NO) {
+//        
+//        if (indexPath.row == 0) {
 //            cell.bubbleimage.hidden = NO;
 //            cell.namelabel.text = @"在这里添加日程";
-//            self.first = YES;
-//
+//            cell.namelabel.hidden = NO;
+//        }
+//        else
+//        {
+//            cell.bubbleimage.hidden = YES;
+//            cell.namelabel.text = @"";
+//            cell.namelabel.hidden = YES;
+//        }
+//        self.first = YES;
+//        
 //    }
 //    else
 //    {
-//        cell.bubbleimage.hidden = YES;
-//        cell.namelabel.text = @"";
+    
+    
 //    }
     
-    if (self.first == NO) {
-        
-        if (indexPath.row == 0) {
-            cell.bubbleimage.hidden = NO;
-            cell.namelabel.text = @"在这里添加日程";
-        }
-        else
-        {
-            cell.bubbleimage.hidden = YES;
-            cell.namelabel.text = @"";
-        }
-        self.first = YES;
-        
-    }
-    else
-    {
-        //cell.bubbleimage.hidden = NO;
-
-        return cell;
-    }
+    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
     
+    Schedule *schedule = s.scheduleArray[indexPath.row];
     
+    cell.num = indexPath.row;
     
+    cell.schedule = schedule;
     return cell;
 }
 
@@ -334,6 +363,9 @@ static NSString *const cellID = @"mycell";
     // 获取cell
     MyCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
+    NSLog(@"cell: %ld",cell.num);
+    
+    
     // 如果namelabel 为空 点击无效果
     if ([cell.namelabel.text isEqualToString:@""]) {
         return;
@@ -353,7 +385,14 @@ static NSString *const cellID = @"mycell";
 
 
 
-
+#pragma mark - 懒加载
+- (NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 
 
