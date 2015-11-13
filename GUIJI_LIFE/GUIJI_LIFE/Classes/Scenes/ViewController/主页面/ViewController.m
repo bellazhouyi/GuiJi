@@ -16,7 +16,7 @@
 
 typedef void (^block) (void);
 
-@interface ViewController () <UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface ViewController () <UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -77,23 +77,9 @@ static NSString *const cellID = @"mycell";
 
 @implementation ViewController
 
-//- (void)loadView
-//{
-//    
-//    
-//    // 加载数据
-//    //s = [[ScheduleHelper alloc] init];
-//}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
-    
-    NSLog(@"scheduleArray : %@",s.scheduleArray);
-
-    
     
     // box隐藏
     self.buttons = @[_TopButton];
@@ -129,7 +115,7 @@ static NSString *const cellID = @"mycell";
 
 
 
-// 返回
+#pragma mark -- 返回
 - (IBAction)backAction:(UIButton *)sender {
     
         
@@ -161,7 +147,7 @@ static NSString *const cellID = @"mycell";
 }
 
 
-// 旋转
+#pragma mark -- 旋转
 - (void)tapviewAction
 {
     // scrollView滚动
@@ -202,11 +188,9 @@ static NSString *const cellID = @"mycell";
 
 
 
-// 弹出/收起 抽屉
+#pragma mark -- 弹出/收起 抽屉
 - (void) genieToRect: (CGRect)rect edge: (BCRectEdge) edge
 {
-    
-//self.boundingBox.frame.size.width / 2, self.boundingBox.frame.size.height /2
     
     _endRect = CGRectInset(rect,50.0,50.0);
 
@@ -258,14 +242,14 @@ static NSString *const cellID = @"mycell";
     
 }
 
-// 毛玻璃消失
+#pragma mark -- 毛玻璃消失
 - (void)tapAction
 {
     [self genieToRect:_TopButton.frame edge:BCRectEdgeTop];
 }
 
 
-// 弹出/收起抽屉
+#pragma mark --弹出/收起抽屉
 - (IBAction)topAction:(UIButton *)sender {
     
     
@@ -277,52 +261,27 @@ static NSString *const cellID = @"mycell";
 
 }
 
-// 分区个数
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
 
-// cell个数
+
+#pragma mark -- row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
-    return  s.scheduleArray.count;
+    ScheduleHelper *scheduleHelper = [ScheduleHelper sharedDatamanager];
+    return  scheduleHelper.scheduleArray.count;
 }
 
 
-// 显示内容
+#pragma mark -- cell内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
+    cell.addTextField.delegate = self;
     
-//    if (self.first == NO) {
-//        
-//        if (indexPath.row == 0) {
-//            cell.bubbleimage.hidden = NO;
-//            cell.namelabel.text = @"在这里添加日程";
-//            cell.namelabel.hidden = NO;
-//        }
-//        else
-//        {
-//            cell.bubbleimage.hidden = YES;
-//            cell.namelabel.text = @"";
-//            cell.namelabel.hidden = YES;
-//        }
-//        self.first = YES;
-//        
-//    }
-//    else
-//    {
+    ScheduleHelper *scheduleHelper = [ScheduleHelper sharedDatamanager];
     
-    
-//    }
-    
-    ScheduleHelper *s = [ScheduleHelper sharedDatamanager];
-    
-    Schedule *schedule = s.scheduleArray[indexPath.row];
+    Schedule *schedule = scheduleHelper.scheduleArray[indexPath.row];
     
     cell.num = indexPath.row;
     
@@ -330,15 +289,20 @@ static NSString *const cellID = @"mycell";
     return cell;
 }
 
-// cell高度
+#pragma mark  -- UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark -- cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
 }
 
 
-
-// 区头
+#pragma mark -- 区头
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *titleLabel = [[UILabel alloc] init];
@@ -349,7 +313,8 @@ static NSString *const cellID = @"mycell";
     return titleLabel;
     
 }
-// 区头高度
+
+#pragma mark -- 区头高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 80;
@@ -362,9 +327,6 @@ static NSString *const cellID = @"mycell";
     
     // 获取cell
     MyCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    NSLog(@"cell: %ld",cell.num);
-    
     
     // 如果namelabel 为空 点击无效果
     if ([cell.namelabel.text isEqualToString:@""]) {

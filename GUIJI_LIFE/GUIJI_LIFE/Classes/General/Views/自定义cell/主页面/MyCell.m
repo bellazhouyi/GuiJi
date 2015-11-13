@@ -59,6 +59,20 @@
     
     [s.appDelegate.managedObjectContext save:nil];
     
+    //判断数据库中保存的值是否是允许开启闹钟功能
+    if ([[_schedule isClock] boolValue] == YES) {
+        
+        //得到时间
+        NSString *hour = [NSString stringWithFormat:@"%@",[_schedule hour]];
+        //得到内容
+        NSString *content = [_schedule content];
+        
+        //是的话，就写一个通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"clock" object:nil userInfo:@{@"hour":hour,@"content":content}];
+        
+    }
+    
+    
 }
 
 
@@ -89,11 +103,8 @@
     
     _schedule = s.scheduleArray[self.num];
     
-    NSLog(@"wo:%ld",self.num);
     // 保存namelabel 给 content
     _schedule.content = self.addTextField.text;
-    NSLog(@"%@",self.addTextField.text);
-    NSLog(@"~~~%@",_schedule.content);
 
     
     
@@ -111,10 +122,6 @@
 // 点击按钮 弹出左抽屉
 - (IBAction)leftButtonAction:(UIButton *)sender {
     
-    
-    
-    
-    NSLog(@"%ld",self.num);
 
     // 弹出 / 收起抽屉方法
     [self genieToRect:sender.frame edge:BCRectEdgeRight];
@@ -208,13 +215,6 @@
     
     
 }
-
-
-
-
-
-
-
 
 
 

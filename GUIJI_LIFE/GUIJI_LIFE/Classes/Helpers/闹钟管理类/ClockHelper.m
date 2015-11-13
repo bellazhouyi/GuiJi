@@ -24,8 +24,6 @@
     NSDate *currentDate  = [self getCustomDateWithHour:[time integerValue]];
     
     
-    NSLog(@" --------- %@",currentDate);
-    
     //设置调用时间
     notification.fireDate=currentDate;//通知触发的时间，10s以后
     notification.repeatInterval=2;//通知重复次数
@@ -34,7 +32,7 @@
     
     //设置通知属性
     notification.alertBody=content; //通知主体
-    notification.applicationIconBadgeNumber=1;//应用程序图标右上角显示的消息数
+    notification.applicationIconBadgeNumber=0;//应用程序图标右上角显示的消息数
     notification.alertAction=@"打开应用"; //待机界面的滑动动作提示
     notification.alertLaunchImage=@"Default";//通过点击通知打开应用时的启动图片,这里使用程序启动图片
     //notification.soundName=UILocalNotificationDefaultSoundName;//收到通知时播放的声音，默认消息声音
@@ -67,7 +65,7 @@
     [resultComps setMonth:[currentComps month]];
     [resultComps setDay:[currentComps day]];
     [resultComps setHour:hour];
-    [resultComps setMinute:30];
+    [resultComps setMinute:00];
     [resultComps setSecond:00];
     
     NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
