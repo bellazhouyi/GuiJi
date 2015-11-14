@@ -70,9 +70,6 @@ static NSString *downCellID = @"cellDown_Identifier";
     self.tableView.bounces = NO;
     
     
-#pragma mark  获取数据
-    [self loadData];
-    
 }
 
 #pragma mark 加载数据
@@ -83,7 +80,7 @@ static NSString *downCellID = @"cellDown_Identifier";
     //得到所有日期的用户轨迹相关信息
 //    self.arrayMapInfo = trailHelper.allMapInfo;
 #warning 根据家赫那个页面的tableViewCell的点击行数得到对应的时间，传值过来即可，到时候可以写一个属性，便可以实现
-    NSString *specifiedDate = @"2015-11-14";
+    NSString *specifiedDate = self.date;
     //得到同一天的用户轨迹相关信息
     self.arrayMapInfo = [trailHelper filterMapInfoDataByDate:specifiedDate];
 }
@@ -209,6 +206,17 @@ static NSString *downCellID = @"cellDown_Identifier";
 }
 
 
+
+#pragma mark 接收date的值
+-(void)setDate:(NSString *)date{
+    _date = date;
+    
+     // 获取数据
+    [self loadData];
+}
+
+
+
 #pragma mark 懒加载
 -(NSArray *)arrayMapInfo{
     if (!_arrayMapInfo) {
@@ -216,5 +224,8 @@ static NSString *downCellID = @"cellDown_Identifier";
     }
     return _arrayMapInfo;
 }
+
+
+
 
 @end

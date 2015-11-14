@@ -10,6 +10,7 @@
 #import "MyCell.h"
 #import "UIView+Genie.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TripViewController.h"
 
 
 #define KscreenHeight [UIScreen mainScreen].bounds.size.height
@@ -68,17 +69,47 @@ typedef void (^block) (void);
 // 数据管理者
 @property (nonatomic,strong) ScheduleHelper *scheduleHelper;
 
+// 日期存放
+@property(nonatomic,strong)NSMutableArray *dateAllArray;
 
 
 @end
 
 static NSString *const cellID = @"mycell";
+static NSString *boundingBoxCellIdentifier = @"boundingBoxCell";
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //获得当天的值
+    NSDate *date=[NSDate date];
+    NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy.MM.dd"];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents *comps = nil;
+    
+    comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date];
+    
+    
+    for (int i = 0; i < 7; i++)
+    {
+        
+        NSDateComponents *adcomps = [[NSDateComponents alloc] init];
+        
+        [adcomps setDay:-i-1];
+        
+        NSDate *newdate=[calendar dateByAddingComponents:adcomps toDate:date options:0];
+        NSString *stringDate=[formatter stringFromDate:newdate];
+        
+        
+        [self.dateAllArray addObject:stringDate];
+        
+    }
     // box隐藏
     self.buttons = @[_TopButton];
     self.boundingBox.hidden = YES;
@@ -101,13 +132,16 @@ static NSString *const cellID = @"mycell";
     // tableview设置代理
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+
+    self.boundingBox.delegate = self;
+    self.boundingBox.dataSource = self;
+    
 
 }
 
 #pragma mark -- 返回
 - (IBAction)backAction:(UIButton *)sender {
-    
-        
     
     
     // 时间轴出现
@@ -124,7 +158,6 @@ static NSString *const cellID = @"mycell";
         self.lineView.frame = _frame;
         
     } completion:^(BOOL finished) {
-        NSLog(@"动画完成了");
         
     }];
  
@@ -264,9 +297,14 @@ static NSString *const cellID = @"mycell";
 #pragma mark -- row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    if (self.boundingBox == tableView) {
+        return 7;
+    }else{
+    
     ScheduleHelper *scheduleHelper = [ScheduleHelper sharedDatamanager];
     return  scheduleHelper.scheduleArray.count;
-
+    }
 }
 
 
@@ -274,6 +312,21 @@ static NSString *const cellID = @"mycell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (self.boundingBox == tableView) {
+        
+        UITableViewCell *Boxcell=[tableView dequeueReusableCellWithIdentifier:boundingBoxCellIdentifier];
+        
+        if (Boxcell == nil) {
+            Boxcell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:boundingBoxCellIdentifier];
+        }
+        
+        Boxcell.textLabel.text = self.dateAllArray[indexPath.row];
+        
+        return Boxcell;
+        
+    }else{
+    
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
     cell.addTextField.delegate = self;
@@ -289,6 +342,7 @@ static NSString *const cellID = @"mycell";
 
     
     return cell;
+    }
 }
 
 #pragma mark  -- UITextFieldDelegate
@@ -301,7 +355,11 @@ static NSString *const cellID = @"mycell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.boundingBox == tableView) {
+        return 50;
+    }else{
     return 100;
+    }
 }
 
 
@@ -310,12 +368,18 @@ static NSString *const cellID = @"mycell";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    
+    if (self.boundingBox == tableView) {
+        return nil;
+    }else{
+    
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.frame = CGRectMake(5, 0, 200, 80);
     titleLabel.textColor = [UIColor purpleColor];
     titleLabel.text = @"为你的行程填上一笔";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     return titleLabel;
+    }
     
 }
 
@@ -323,13 +387,35 @@ static NSString *const cellID = @"mycell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (self.boundingBox == tableView) {
+        return 0;
+    }else{
+    
     return 80;
+    }
 }
 
 
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if (self.boundingBox == tableView) {
+        
+        TrailViewController *trailVC = [[TrailViewController alloc]init];
+        
+        trailVC.view.backgroundColor = [UIColor whiteColor];
+        
+        //传日期得值
+        trailVC.date = self.dateAllArray[indexPath.row];
+        
+        [self presentViewController:trailVC animated:YES completion:nil];
+        
+        
+        
+        
+    }else{
+    
     // 获取cell
     MyCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     // 如果namelabel 为空 点击无效果
@@ -343,7 +429,7 @@ static NSString *const cellID = @"mycell";
     }
 
     cell.namelabel.text = @"ttttttttttt";
-    
+    }
     
 }
 
@@ -363,11 +449,33 @@ static NSString *const cellID = @"mycell";
     
     TrailViewController *trailVC = [TrailViewController new];
     
+    trailVC.view.backgroundColor = [UIColor whiteColor];
+    
+    //获得当天日期
+    NSDate *date = [NSDate date];
+    
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSString *dateStr = [formatter stringFromDate:date];
+    
+    //传值
+    trailVC.date = dateStr;
+    
+    
     [self presentViewController:trailVC animated:YES completion:nil];
     
 }
 
-
+#pragma mark - dateAllArray 懒加载
+- (NSMutableArray *)dateAllArray
+{
+    if (!_dateAllArray) {
+        self.dateAllArray=[NSMutableArray array];
+    }
+    return _dateAllArray;
+}
 
 
 

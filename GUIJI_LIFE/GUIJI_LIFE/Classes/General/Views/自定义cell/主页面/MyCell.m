@@ -267,13 +267,7 @@ static int hour = 6;
 
 - (void)awakeFromNib {
 
-//    // 设置leftBox首先隐藏
-//    self.leftBox.hidden = YES;
-//    
-//    // 将气泡图片 隐藏 当没有文字时(没有添加日程)
-//    self.bubbleimage.hidden = YES;
-    
-    
+    //设置时间
     if (hour < 24) {
         [self.leftButton setTitle:[NSString stringWithFormat:@"%d",hour += 2] forState:UIControlStateNormal];
     }
