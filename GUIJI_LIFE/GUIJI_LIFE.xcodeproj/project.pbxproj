@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21049FF81BF6E57E006CEE9F /* ScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21049FF71BF6E57E006CEE9F /* ScheduleController.m */; };
 		2109FFCD1BF4243D0069339A /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2109FFCB1BF4243D0069339A /* MyCell.m */; };
 		2109FFCE1BF4243D0069339A /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2109FFCC1BF4243D0069339A /* MyCell.xib */; };
 		213B7E771BF58AC100ED8FBB /* ScheduleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 213B7E761BF58AC100ED8FBB /* ScheduleHelper.m */; };
 		213B7E7B1BF58B7200ED8FBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213B7E781BF58B7200ED8FBB /* Main.storyboard */; };
 		213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213B7E7A1BF58B7200ED8FBB /* ViewController.m */; };
+		21AFC6F91BF6E1EF007CC585 /* ADCircularMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AFC6F81BF6E1EF007CC585 /* ADCircularMenuViewController.m */; };
 		C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D21BF1D48D0000535D /* Trail_DownCell.m */; };
 		C213D4D81BF1D48D0000535D /* Trail_DownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */; };
 		C213D4D91BF1D48D0000535D /* Trail_UpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C213D4D51BF1D48D0000535D /* Trail_UpCell.m */; };
@@ -35,15 +37,13 @@
 		C26273461BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C26273291BF07034004DE7D4 /* beizhu.txt */; };
 		C26273471BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262732C1BF07034004DE7D4 /* beizhu.txt */; };
 		C26273491BF07034004DE7D4 /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273331BF07034004DE7D4 /* TrailViewController.m */; };
-		C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273361BF07034004DE7D4 /* TripViewController.m */; };
-		C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273391BF07034004DE7D4 /* ScheduleViewController.m */; };
 		C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C262733C1BF07034004DE7D4 /* PackViewController.m */; };
 		C262734D1BF07034004DE7D4 /* beizhu.txt in Resources */ = {isa = PBXBuildFile; fileRef = C262733E1BF07034004DE7D4 /* beizhu.txt */; };
 		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; };
 		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; };
 		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
-		C26750431BF6CF380032EF9D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26750411BF6CF380032EF9D /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C26750441BF6CF380032EF9D /* Trail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26750421BF6CF380032EF9D /* Trail.storyboard */; settings = {ASSET_TAGS = (); }; };
+		C26750431BF6CF380032EF9D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26750411BF6CF380032EF9D /* TestViewController.m */; };
+		C26750441BF6CF380032EF9D /* Trail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26750421BF6CF380032EF9D /* Trail.storyboard */; };
 		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; };
 		C296F14D1BF22B95008A9EBD /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F14B1BF22B95008A9EBD /* PackCell.m */; };
 		C296F14E1BF22B95008A9EBD /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296F14C1BF22B95008A9EBD /* PackCell.xib */; };
@@ -54,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21049FF61BF6E57E006CEE9F /* ScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleController.h; sourceTree = "<group>"; };
+		21049FF71BF6E57E006CEE9F /* ScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleController.m; sourceTree = "<group>"; };
 		2109FFCA1BF4243D0069339A /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		2109FFCB1BF4243D0069339A /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
 		2109FFCC1BF4243D0069339A /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		213B7E781BF58B7200ED8FBB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		213B7E791BF58B7200ED8FBB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		213B7E7A1BF58B7200ED8FBB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21AFC6F71BF6E1EF007CC585 /* ADCircularMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCircularMenuViewController.h; sourceTree = "<group>"; };
+		21AFC6F81BF6E1EF007CC585 /* ADCircularMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCircularMenuViewController.m; sourceTree = "<group>"; };
 		C213D4D11BF1D48D0000535D /* Trail_DownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trail_DownCell.h; sourceTree = "<group>"; };
 		C213D4D21BF1D48D0000535D /* Trail_DownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trail_DownCell.m; sourceTree = "<group>"; };
 		C213D4D31BF1D48D0000535D /* Trail_DownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Trail_DownCell.xib; sourceTree = "<group>"; };
@@ -93,10 +97,6 @@
 		C262732C1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
 		C26273321BF07034004DE7D4 /* TrailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailViewController.h; sourceTree = "<group>"; };
 		C26273331BF07034004DE7D4 /* TrailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailViewController.m; sourceTree = "<group>"; };
-		C26273351BF07034004DE7D4 /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
-		C26273361BF07034004DE7D4 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
-		C26273381BF07034004DE7D4 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
-		C26273391BF07034004DE7D4 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		C262733B1BF07034004DE7D4 /* PackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackViewController.h; sourceTree = "<group>"; };
 		C262733C1BF07034004DE7D4 /* PackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackViewController.m; sourceTree = "<group>"; };
 		C262733E1BF07034004DE7D4 /* beizhu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beizhu.txt; sourceTree = "<group>"; };
@@ -344,7 +344,6 @@
 			children = (
 				C262732E1BF07034004DE7D4 /* 主页面 */,
 				C26273311BF07034004DE7D4 /* 系统自动生成页面 */,
-				C26273341BF07034004DE7D4 /* 自定义日程展示页面 */,
 				C26273371BF07034004DE7D4 /* 自定义日程输入页面 */,
 				C262733A1BF07034004DE7D4 /* 行囊页面 */,
 			);
@@ -373,20 +372,11 @@
 			path = "系统自动生成页面";
 			sourceTree = "<group>";
 		};
-		C26273341BF07034004DE7D4 /* 自定义日程展示页面 */ = {
-			isa = PBXGroup;
-			children = (
-				C26273351BF07034004DE7D4 /* TripViewController.h */,
-				C26273361BF07034004DE7D4 /* TripViewController.m */,
-			);
-			path = "自定义日程展示页面";
-			sourceTree = "<group>";
-		};
 		C26273371BF07034004DE7D4 /* 自定义日程输入页面 */ = {
 			isa = PBXGroup;
 			children = (
-				C26273381BF07034004DE7D4 /* ScheduleViewController.h */,
-				C26273391BF07034004DE7D4 /* ScheduleViewController.m */,
+				21049FF61BF6E57E006CEE9F /* ScheduleController.h */,
+				21049FF71BF6E57E006CEE9F /* ScheduleController.m */,
 			);
 			path = "自定义日程输入页面";
 			sourceTree = "<group>";
@@ -452,6 +442,8 @@
 		C296F14F1BF22BD1008A9EBD /* 主页面抽屉 */ = {
 			isa = PBXGroup;
 			children = (
+				21AFC6F71BF6E1EF007CC585 /* ADCircularMenuViewController.h */,
+				21AFC6F81BF6E1EF007CC585 /* ADCircularMenuViewController.m */,
 				C296F1501BF22BD1008A9EBD /* UIView+Genie.h */,
 				C296F1511BF22BD1008A9EBD /* UIView+Genie.m */,
 			);
@@ -498,7 +490,7 @@
 				TargetAttributes = {
 					C26272F91BF07015004DE7D4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = RHFEFUNF6U;
+						DevelopmentTeam = 9NX2ZCM4QL;
 					};
 				};
 			};
@@ -571,13 +563,13 @@
 				213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
-				C262734A1BF07034004DE7D4 /* TripViewController.m in Sources */,
+				21049FF81BF6E57E006CEE9F /* ScheduleController.m in Sources */,
 				C213D4D71BF1D48D0000535D /* Trail_DownCell.m in Sources */,
 				C23C177F1BF3720000D98953 /* Schedule+CoreDataProperties.m in Sources */,
 				C23C17801BF3720000D98953 /* Schedule.m in Sources */,
+				21AFC6F91BF6E1EF007CC585 /* ADCircularMenuViewController.m in Sources */,
 				C262733F1BF07034004DE7D4 /* AppDelegate.m in Sources */,
 				C262734C1BF07034004DE7D4 /* PackViewController.m in Sources */,
-				C262734B1BF07034004DE7D4 /* ScheduleViewController.m in Sources */,
 				C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,7 +680,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -704,7 +696,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

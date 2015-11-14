@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -29,11 +29,26 @@
                                                 <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                                 <animations/>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="w4K-Kn-bba">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="w4K-Kn-bba">
                                                 <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cY-oD-3YF">
+                                                <rect key="frame" x="1150" y="530" width="40" height="40"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="NiM-Q7-bPi"/>
+                                                    <constraint firstAttribute="height" constant="40" id="ZfU-qJ-ytW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="菜单">
+                                                    <color key="titleColor" red="0.85490196080000003" green="0.32113399780000002" blue="0.3919888279" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rightButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sn0-fX-8Og"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhP-7V-eLH">
                                                 <rect key="frame" x="605" y="500" width="100" height="100"/>
                                                 <animations/>
@@ -79,6 +94,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGU-Ik-0Yd">
                                                 <rect key="frame" x="80" y="158" width="120" height="30"/>
+                                                <animations/>
                                                 <state key="normal" title="系统自动生成轨迹"/>
                                                 <connections>
                                                     <action selector="toTrailVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dms-iU-A8C"/>
@@ -89,8 +105,10 @@
                                         <color key="backgroundColor" red="0.85490196080000003" green="0.32113399780000002" blue="0.3919888279" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="w4K-Kn-bba" firstAttribute="leading" secondItem="rhP-7V-eLH" secondAttribute="trailing" constant="-105" id="2E3-uP-Ykz"/>
+                                            <constraint firstAttribute="trailing" secondItem="4cY-oD-3YF" secondAttribute="trailing" constant="10" id="2R0-2l-ozx"/>
                                             <constraint firstAttribute="trailing" secondItem="w4K-Kn-bba" secondAttribute="trailing" id="2mz-s6-WOf"/>
                                             <constraint firstItem="yp2-g6-XbI" firstAttribute="top" secondItem="hgh-US-3FB" secondAttribute="top" id="684-0Y-dXe"/>
+                                            <constraint firstAttribute="bottom" secondItem="4cY-oD-3YF" secondAttribute="bottom" constant="30" id="EQo-3u-KLY"/>
                                             <constraint firstItem="yp2-g6-XbI" firstAttribute="top" secondItem="hgh-US-3FB" secondAttribute="top" id="GLr-eD-Y7m"/>
                                             <constraint firstAttribute="bottom" secondItem="3Uv-PX-qRl" secondAttribute="bottom" constant="200" id="JiB-Ju-SN9"/>
                                             <constraint firstItem="3Uv-PX-qRl" firstAttribute="top" secondItem="hgh-US-3FB" secondAttribute="top" constant="200" id="OdV-u2-Ucq"/>
@@ -173,6 +191,7 @@
                         <outlet property="backButton" destination="FLO-SY-C2D" id="12o-P8-erT"/>
                         <outlet property="boundingBox" destination="3Uv-PX-qRl" id="mfG-Jd-MF7"/>
                         <outlet property="lineView" destination="gfj-Ft-hUW" id="d6t-2h-HoE"/>
+                        <outlet property="rightButton" destination="4cY-oD-3YF" id="tt4-p2-KxQ"/>
                         <outlet property="scrollView" destination="Qnw-5M-wEN" id="7G4-RM-W6H"/>
                         <outlet property="tableView" destination="w4K-Kn-bba" id="mbd-lm-BO4"/>
                         <outlet property="visualView" destination="2et-uI-Z8A" id="eRT-Yw-GNO"/>

@@ -10,13 +10,15 @@
 #import "MyCell.h"
 #import "UIView+Genie.h"
 #import <QuartzCore/QuartzCore.h>
-
-
+#import "ADCircularMenuViewController.h"
 #define KscreenHeight [UIScreen mainScreen].bounds.size.height
 
 typedef void (^block) (void);
 
-@interface ViewController () <UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@interface ViewController () <UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,ADCircularMenuDelegate>
+{
+    ADCircularMenuViewController *circularMenuVC;
+}
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -68,6 +70,8 @@ typedef void (^block) (void);
 // 数据管理者
 @property (nonatomic,strong) ScheduleHelper *scheduleHelper;
 
+// 右下角菜单
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
 
 
 @end
@@ -103,6 +107,42 @@ static NSString *const cellID = @"mycell";
     self.tableView.dataSource = self;
 
 }
+
+
+// 右下角菜单按钮
+- (IBAction)rightButtonAction:(UIButton *)sender {
+    
+    
+    circularMenuVC = nil;
+    
+    //use 3 or 7 or 12 for symmetric look (current implementation supports max 12 buttons)
+    NSArray *arrImageName = [[NSArray alloc] initWithObjects:@"btnMenu",
+                             @"btnMenu",
+                             @"btnMenu",
+                             @"btnMenu",
+                             @"btnMenu",
+                             @"btnMenu",
+                             @"btnMenu", nil];
+    
+    circularMenuVC = [[ADCircularMenuViewController alloc] initWithMenuButtonImageNameArray:arrImageName andCornerButtonImageName:@"btnMenuCorner"];
+    
+    circularMenuVC.delegateCircularMenu = self;
+    [circularMenuVC show];
+
+    
+}
+
+// 选项点击的事件
+- (void)circularMenuClickedButtonAtIndex:(int) buttonIndex
+{
+    
+    
+}
+
+
+
+
+
 
 #pragma mark -- 返回
 - (IBAction)backAction:(UIButton *)sender {
