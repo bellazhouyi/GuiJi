@@ -9,14 +9,21 @@
 #import <Foundation/Foundation.h>
 
 /**
- *用于从数据库中取地图相关信息的工具
+ *用于从数据库中取用户运动轨迹相关信息的工具
  **/
 @interface TrailHelper : NSObject
 
 
-#pragma mark 根据指定的时间返回特定的地点信息
--(MapInfo *)gainMapInfoFromCoreDataBySpecifiedHour:(NSInteger)hour;
+//取数据--返回所有的MapInfo数据
+@property(nonatomic,strong) NSArray *allMapInfo;
 
+#pragma mark 存数据 
+-(void)saveMapInfoWithTime:(NSString *)time date:(NSString *)date andLocationName:(NSString *)locationName;
+
+
+
+#pragma mark 根据日期筛选数据
+-(NSArray *)filterMapInfoDataByDate:(NSString *)date;
 
 
 @end

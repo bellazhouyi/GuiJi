@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15A284" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
     <entity name="MapInfo" representedClassName="MapInfo" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Schedule" representedClassName="Schedule" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,7 +14,7 @@
         <attribute name="showBox" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MapInfo" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="MapInfo" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Schedule" positionX="-54" positionY="9" width="128" height="135"/>
     </elements>
 </model>

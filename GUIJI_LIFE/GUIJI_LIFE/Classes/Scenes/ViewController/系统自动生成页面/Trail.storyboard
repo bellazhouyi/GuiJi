@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="wTi-ev-vea">
+            <objects>
+                <viewController storyboardIdentifier="TestVCID" id="Kw8-M4-79S" customClass="TestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MtM-jU-dtd"/>
+                        <viewControllerLayoutGuide type="bottom" id="AOW-Kg-L73"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JdB-cv-TPx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTd-zd-a8G">
+                                <rect key="frame" x="30" y="120" width="480" height="21"/>
+                                <color key="backgroundColor" red="0.83395678470000001" green="0.93693995969999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-Jy-Ia8">
+                                <rect key="frame" x="45" y="28" width="30" height="30"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="backAction:" destination="Kw8-M4-79S" eventType="touchUpInside" id="Rc7-XF-T3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZTd-zd-a8G" firstAttribute="width" secondItem="JdB-cv-TPx" secondAttribute="width" multiplier="0.8" id="AEp-B1-aoG"/>
+                            <constraint firstItem="ZTd-zd-a8G" firstAttribute="top" secondItem="MtM-jU-dtd" secondAttribute="bottom" constant="100" id="DZO-M2-F0t"/>
+                            <constraint firstItem="ZTd-zd-a8G" firstAttribute="leading" secondItem="JdB-cv-TPx" secondAttribute="leading" constant="30" id="XWC-Ig-goh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="ZTd-zd-a8G" id="NKS-aS-xzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWV-d4-leJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="372"/>
+        </scene>
+    </scenes>
+</document>

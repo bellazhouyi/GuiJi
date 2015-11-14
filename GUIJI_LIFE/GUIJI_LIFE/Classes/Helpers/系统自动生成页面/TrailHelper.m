@@ -13,46 +13,51 @@
 //声明AppDelegate实例
 @property(nonatomic,strong) AppDelegate *appDelegate;
 
+
 @end
 
 
 @implementation TrailHelper
 
-#pragma mark 根据指定的时间返回特定的地点信息
--(MapInfo *)gainMapInfoFromCoreDataBySpecifiedHour:(NSInteger)hour{
+#pragma mark 存数据
+-(void)saveMapInfoWithTime:(NSString *)time date:(NSString *)date andLocationName:(NSString *)locationName{
     
-    // 从CoreData中取出数据
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MapInfo" inManagedObjectContext:self.appDelegate.managedObjectContext];
-    [fetchRequest setEntity:entity];
+    //获得实体描述实例
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"MapInfo" inManagedObjectContext:self.appDelegate.managedObjectContext];
     
-    NSError *error = nil;
+    //根据实体描述实例获得实体
+    MapInfo *mapInfo = [[MapInfo alloc]initWithEntity:entityDescription insertIntoManagedObjectContext:self.appDelegate.managedObjectContext];
     
-    //得到所有的MapInfo
-    NSArray *fetchedObjects = [self.appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-   
+    //给数据库实体的各个字段赋值
+    mapInfo.time = time;
+    mapInfo.date = date;
+    mapInfo.locationName = locationName;
+    
+    //保存并更新
+    [self.appDelegate saveContext];
+    
+    
+}
+
+/*
+#pragma mark 判断当前系统时间和指定时间是否是一致的
+-(BOOL)compareCurrentDate:(NSDate *)currentDate withSpecifiedDate:(NSInteger)hour{
+    
+    //算出当前时间的偏移量
+    int currentDateOffset = (int)[self calculateOffsetFromSpecifiedTime:currentDate];
+    
     //获取根据自己规定的整点得到时间
     NSDate *specifiedTime = [self getCustomDateWithHour:hour];
     
-    //得到指定时间的偏移量
-    double specifiedOffset = [self calculateOffsetFromSpecifiedTime:specifiedTime];
-    MapInfo *resultMapInfo ;
+    //算出指定时间的偏移量
+    int specifiedTimeOffset = (int)[self calculateOffsetFromSpecifiedTime:specifiedTime];
     
-    //遍历，比较时间，得到具体信息
-    for (MapInfo *mapInfo in fetchedObjects) {
-        double mapInfoOffset = [self calculateOffsetFromSpecifiedTime:[mapInfo time]];
-        //比较两个时间的偏移量
-        if ((int)specifiedOffset - (int)mapInfoOffset == 0) {
-            resultMapInfo = mapInfo;
-            break;
-        }
-        
+    if (currentDateOffset == specifiedTimeOffset) {
+        return YES;
     }
-    
-        
-    //返回最终的MapInfo信息
-    return resultMapInfo;
-
+    else{
+        return NO;
+    }
 }
 
 #pragma mark 生成当天的某个具体时间点
@@ -74,7 +79,7 @@
     [resultComps setMonth:[currentComps month]];
     [resultComps setDay:[currentComps day]];
     [resultComps setHour:hour];
-    [resultComps setMinute:9];
+    [resultComps setMinute:24];
     [resultComps setSecond:0];
     
     NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -108,8 +113,58 @@
     
 }
 
+*/
 
 
+#pragma mark 根据日期筛选数据
+-(NSArray *)filterMapInfoDataByDate:(NSString *)date{
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MapInfo" inManagedObjectContext:self.appDelegate.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date = %@", date];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time"
+                                                                   ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        NSLog(@"当前日期下没有相应的数据");
+    }
+    
+    return fetchedObjects;
+}
+
+
+#pragma mark 返回数据库中的所有信息
+-(NSArray *)gainAllMapInfoFromCoreData{
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MapInfo" inManagedObjectContext:self.appDelegate.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        
+    }
+    
+    return fetchedObjects;
+}
+
+
+
+#pragma mark 返回所有数据
+-(NSArray *)allMapInfo{
+    return  [self gainAllMapInfoFromCoreData];
+}
+
+
+#pragma mark appDelegate懒加载
 -(AppDelegate *)appDelegate{
     if (!_appDelegate) {
         _appDelegate = [UIApplication sharedApplication].delegate;

@@ -55,8 +55,6 @@ static int hour = 6;
     }
     
     
-    
-    NSLog(@"%@",scheduleHelper.scheduleArray);
     // 把schedule模型保存进数据库
     _schedule =  scheduleHelper.scheduleArray[self.num] ;
     
@@ -66,6 +64,11 @@ static int hour = 6;
     [scheduleHelper.appDelegate.managedObjectContext save:nil];
     
     
+    //关于闹钟
+    if ([_schedule.isClock boolValue] == YES) {
+        //写一个通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"clock" object:nil userInfo:@{@"time":@"10"}];
+    }
     
     
 }
@@ -113,6 +116,10 @@ static int hour = 6;
     [s.appDelegate.managedObjectContext save:&error];
 
     
+    
+    
+    
+    
 }
 
 
@@ -121,10 +128,6 @@ static int hour = 6;
 // 点击按钮 弹出左抽屉
 - (IBAction)leftButtonAction:(UIButton *)sender {
     
-    
-    
-    
-    NSLog(@"%ld",self.num);
 
     // 弹出 / 收起抽屉方法
     [self genieToRect:sender.frame edge:BCRectEdgeRight];

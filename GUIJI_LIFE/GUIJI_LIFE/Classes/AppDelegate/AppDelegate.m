@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ClockHelper.h"
+#import "TrailHelper.h"
 //引入地图框架
 @import MapKit;
 
@@ -16,6 +17,10 @@
 //定义CLLocationManager属性
 @property(nonatomic,strong) CLLocationManager *locationManager;
 
+
+//固定一个时间数组
+@property(nonatomic,strong) NSMutableArray *timeArray;
+
 @end
 
 @implementation AppDelegate
@@ -23,6 +28,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
+    //初始化时间数组
+    for (int i = 8; i < 24; i++) {
+        NSString *specifiedTime = [NSString stringWithFormat:@"%d:00:00",i];
+        [self.timeArray addObject:specifiedTime];
+    }
+
+    
+    
     //定义MKMapView视图
     MKMapView *mapView = [[MKMapView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -60,7 +73,7 @@
     [self.locationManager startUpdatingLocation];
     
     //设置更新间距
-    self.locationManager.distanceFilter = 100;
+    self.locationManager.distanceFilter = 1;
     
     
     
@@ -71,7 +84,6 @@
         
         //从家赫那个页面---数据库中有isClock这么一个Bool，表示是否有闹钟提醒
         //用通知传值--关于时间的形参，调用addLocalNotificationWithTime方法
-        
         //接收通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startClock:) name:@"clock" object:nil];
         
@@ -79,27 +91,20 @@
     }else{
         [[UIApplication sharedApplication]registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound  categories:nil]];
     }
+    
 
-    
-    
-    
-    
     
     return YES;
 }
 
 #pragma mark 处理从MyCell通知中心接收到的通知
--(void)startClock:(NSNotification *)notification{
+-(void)startClock:(NSNotification *)sender{
     
-    //得到时间
-    NSString *hour = notification.userInfo[@"hour"];
-    NSString *content = notification.userInfo[@"content"];
+    NSString *time = sender.userInfo[@"time"];
     
-    
-    //发送本地推送
     ClockHelper *clockHelper = [ClockHelper new];
     
-    [clockHelper addLocalNotificationWithTime:hour content:content];
+    [clockHelper addLocalNotificationWithTime:time content:@"哈哈哈哈哈"];
 }
 
 
@@ -107,53 +112,82 @@
 //更新位置
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     
+    BOOL isBackground = NO;
+    
+    //存储用户位置和当前时间到数据库中
+    [self saveCurrentLoaction:locations];
+    
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
+        isBackground = YES;
+    }
+    
+    //进入后台进行的操作
+    if (isBackground) {
+        
+        //存储用户位置和当前时间到数据库中
+        [self saveCurrentLoaction:locations];
+        
+        UIBackgroundTaskIdentifier bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+            
+            [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+            
+        }];
+        
+        
+        if (bgTask != UIBackgroundTaskInvalid) {
+            [[UIApplication sharedApplication] endBackgroundTask:bgTask];
+            bgTask = UIBackgroundTaskInvalid;
+        }
+        
+        
+        
+    }
+    
+    
+}
+
+#pragma mark 保存当前用户位置
+-(void)saveCurrentLoaction:(NSArray *)locations{
     //获取最新位置
     CLLocation *currentLocation = [locations lastObject];
-  
+    
     //根据最新位置,进行地理反编码
     CLGeocoder *gecoder = [CLGeocoder new];
     
-    //声明block变量
-    __block typeof(self) temp = self;
     
     [gecoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         
         //获取用户当前位置信息
         NSString *userLocationInfo = [[placemarks lastObject] name];
         
-        //得到系统当地当前时间
-        NSTimeZone *zone = [NSTimeZone localTimeZone];
-        //时间戳
-        NSInteger offset = [zone secondsFromGMT];
-        //得出具体时间
-        NSDate *userDate = [NSDate dateWithTimeIntervalSinceNow:offset];
-       
-        //存入数据库中
-        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"MapInfo" inManagedObjectContext:temp.managedObjectContext];
+        NSDate *currentDate = [NSDate date];
         
-        MapInfo *mapInfo = [[MapInfo alloc]initWithEntity:entityDescription insertIntoManagedObjectContext:temp.managedObjectContext];
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
         
-        mapInfo.time = userDate;
-        mapInfo.locationName = userLocationInfo;
+        [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+        //得到日期--字符串
+        NSString *date = [dateFormatter stringFromDate:currentDate];
         
-        //保存更新
-        [temp saveContext];
+        //得到时间--字符串
+        [dateFormatter setDateFormat:@"HH:mm:ss"];
+        
+        NSString *time = [dateFormatter stringFromDate:currentDate];
+        
+        //        //遍历，当前时间跟规定时间吻合后，存入数据库
+        //        for (NSString *itemTime in self.timeArray ) {
+        //
+        //            if ([time isEqualToString:itemTime]) {
+        //存入数据库
+        TrailHelper *trailHelper = [TrailHelper new];
+        [trailHelper saveMapInfoWithTime:time date:date andLocationName:userLocationInfo];
+        //            }
+        //        }
+        
         
     }];
     
-    
 }
 
-#pragma mark 调用用户注册通知方法之后执行（也就是调用完registerUserNotificationSettings:方法之后执行）
--(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
-    if (notificationSettings.types!=UIUserNotificationTypeNone) {
-        
-        
-        ClockHelper *clockHelper = [ClockHelper new];
-        
-        [clockHelper addLocalNotificationWithTime:@"" content:@""];
-    }
-}
 
 
 
@@ -161,16 +195,25 @@
   
 }
 
+#pragma mark 程序进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-   
+    //开启基站定位
+    [self.locationManager startMonitoringSignificantLocationChanges];
+
 }
 #pragma mark 进入前台后设置消息信息
 - (void)applicationWillEnterForeground:(UIApplication *)application {
   [[UIApplication sharedApplication]setApplicationIconBadgeNumber:0];//进入前台取消应用消息图标
 }
 
+#pragma mark 程序进入前台
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-   
+    
+    //取消基站定位
+    [self.locationManager stopMonitoringSignificantLocationChanges];
+    
+    //开启Wifi定位
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

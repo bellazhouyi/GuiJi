@@ -9,6 +9,7 @@
 #import "TrailViewController.h"
 #import "Trail_UpCell.h"
 #import "Trail_DownCell.h"
+#import "TestViewController.h"
 @interface TrailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 // UITableView 的实例
@@ -16,7 +17,7 @@
 
 
 //用于存储MapInfo的数组
-@property(nonatomic,strong) NSMutableArray *arrayMapInfo;
+@property(nonatomic,strong) NSArray *arrayMapInfo;
 
 
 @end
@@ -72,7 +73,6 @@ static NSString *downCellID = @"cellDown_Identifier";
 #pragma mark  获取数据
     [self loadData];
     
-    
 }
 
 #pragma mark 加载数据
@@ -80,25 +80,12 @@ static NSString *downCellID = @"cellDown_Identifier";
     
     TrailHelper *trailHelper = [[TrailHelper alloc]init];
     
-#warning 测试的时候,改为8,而不是7
-    for (int time = 7; time <= 32;) {
-        MapInfo *timeMapInfo = [trailHelper gainMapInfoFromCoreDataBySpecifiedHour:time + 8];
-        
-        //判断当前用户是否有轨迹移动的数据
-        if (timeMapInfo == nil) {
-            NSLog(@"当前时刻没有开启地图定位功能");
-        }
-        else{
-            NSLog(@"  %@",timeMapInfo.locationName);
-            //添加到数组中
-            [self.arrayMapInfo addObject:timeMapInfo];
-            
-            //刷新数据
-            [self.tableView reloadData];
-        }
-        time = time + 2;
-    }
-    
+    //得到所有日期的用户轨迹相关信息
+//    self.arrayMapInfo = trailHelper.allMapInfo;
+#warning 根据家赫那个页面的tableViewCell的点击行数得到对应的时间，传值过来即可，到时候可以写一个属性，便可以实现
+    NSString *specifiedDate = @"2015-11-14";
+    //得到同一天的用户轨迹相关信息
+    self.arrayMapInfo = [trailHelper filterMapInfoDataByDate:specifiedDate];
 }
 
 #pragma mark - 禁止屏幕旋转
@@ -113,21 +100,49 @@ static NSString *downCellID = @"cellDown_Identifier";
 #pragma mark 添加一个HeaderView
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 667)];
+    
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
     [backButton setTitle:@"返回" forState:UIControlStateNormal];
-    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(100, 2, 600, 3)];
     
     [backButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    headerView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+    backButton.frame = CGRectMake(0, 60, 50, 50);
     
-    backButton.transform = CGAffineTransformMakeRotation(M_PI / 2);
+    [headerView addSubview:backButton];
     
-    return backButton;
+    UIButton *testButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [testButton setTitle:@"测试" forState:UIControlStateNormal];
+    
+    testButton.frame = CGRectMake(backButton.frame.origin.x, backButton.frame.origin.y+ backButton.frame.size.height, 50, 50);
+    [testButton addTarget:self action:@selector(testAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [headerView addSubview:testButton];
+    
+    return headerView;
 }
 
 #pragma mark 返回按钮的返回事件
 -(void)backAction:(UIButton *)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark 测试按钮事件
+-(void)testAction:(UIButton *)sender{
+    TestViewController *testVC = [[UIStoryboard storyboardWithName:@"Trail" bundle:nil]instantiateViewControllerWithIdentifier:@"TestVCID"];
+    
+    testVC.view.backgroundColor = [UIColor whiteColor];
+    
+    NSMutableString *message = [NSMutableString new];
+    for (MapInfo *mapInfo in self.arrayMapInfo) {
+        
+        [message appendFormat:@"%@",mapInfo.locationName];
+        
+    }
+     testVC.testLabel.text = message;
+    
+    [self presentViewController:testVC animated:YES completion:nil];
 }
 
 #pragma mark - 设置cell 的行数
@@ -152,14 +167,10 @@ static NSString *downCellID = @"cellDown_Identifier";
         //把数据填充到upCell上
         MapInfo *upMapInfo = self.arrayMapInfo[indexPath.row];
         
-        if (upMapInfo == nil) {
-            upCell.UPLabel.text = @"Sorry,那个时候还没跟上你的脚步";
-        }else{
-            
-            NSString *message = [NSString stringWithFormat:@"%@+%@",upMapInfo.time,upMapInfo.locationName];
-            
-            upCell.UPLabel.text = message;
-        }
+        NSString *message = [NSString stringWithFormat:@"%@+%@+%@",upMapInfo.date,upMapInfo.time,upMapInfo.locationName];
+        
+        upCell.UPLabel.text = message;
+       
         
         
         return upCell;
@@ -173,17 +184,13 @@ static NSString *downCellID = @"cellDown_Identifier";
         downCell.backgroundColor=[UIColor clearColor];
         
         //把数据填充到upCell上
-        MapInfo *upMapInfo = self.arrayMapInfo[indexPath.row];
+        MapInfo *downMapInfo = self.arrayMapInfo[indexPath.row];
         
-        if (upMapInfo == nil) {
-            
-            downCell.DownLabel.text = @"Sorry,那个时候还没跟上你的脚步";
-        }else{
-            
-            NSString *message = [NSString stringWithFormat:@"%@+%@",upMapInfo.time,upMapInfo.locationName];
-            
-            downCell.DownLabel.text = message;
-        }
+
+        NSString *message = [NSString stringWithFormat:@"%@+%@",downMapInfo.time,downMapInfo.locationName];
+        
+        downCell.DownLabel.text = message;
+        
 
         
         return downCell;
@@ -203,9 +210,9 @@ static NSString *downCellID = @"cellDown_Identifier";
 
 
 #pragma mark 懒加载
--(NSMutableArray *)arrayMapInfo{
+-(NSArray *)arrayMapInfo{
     if (!_arrayMapInfo) {
-        _arrayMapInfo = [NSMutableArray arrayWithCapacity:10];
+        _arrayMapInfo = [NSArray array];
     }
     return _arrayMapInfo;
 }

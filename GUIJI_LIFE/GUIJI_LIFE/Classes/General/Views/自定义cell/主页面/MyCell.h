@@ -10,8 +10,6 @@
 #import "UIView+Genie.h"
 #import <QuartzCore/QuartzCore.h>
 
-// 传递时间给闹钟
-typedef void (^passTimeBlock)(NSString *);
 
 
 @interface MyCell : UITableViewCell
@@ -48,8 +46,6 @@ typedef void (^passTimeBlock)(NSString *);
 // cell的标记
 @property (nonatomic,assign) NSInteger num;
 
-// 传递time block
-@property (nonatomic,copy) passTimeBlock passTimeBlock;
 
 // setter方法
 - (void)setSchedule:(Schedule *)schedule;

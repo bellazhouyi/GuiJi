@@ -42,6 +42,8 @@
 		C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273501BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m */; };
 		C26273541BF0926D004DE7D4 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C26273521BF0926D004DE7D4 /* MapInfo.m */; };
 		C26273561BF0975D004DE7D4 /* GUIJI_LIFE.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = C26273091BF07015004DE7D4 /* GUIJI_LIFE.xcdatamodeld */; };
+		C26750431BF6CF380032EF9D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26750411BF6CF380032EF9D /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C26750441BF6CF380032EF9D /* Trail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26750421BF6CF380032EF9D /* Trail.storyboard */; settings = {ASSET_TAGS = (); }; };
 		C296F1421BF1F381008A9EBD /* TrailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F1411BF1F381008A9EBD /* TrailHelper.m */; };
 		C296F14D1BF22B95008A9EBD /* PackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C296F14B1BF22B95008A9EBD /* PackCell.m */; };
 		C296F14E1BF22B95008A9EBD /* PackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C296F14C1BF22B95008A9EBD /* PackCell.xib */; };
@@ -103,6 +105,9 @@
 		C26273511BF0926D004DE7D4 /* MapInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfo.h; sourceTree = "<group>"; };
 		C26273521BF0926D004DE7D4 /* MapInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfo.m; sourceTree = "<group>"; };
 		C26273551BF0929B004DE7D4 /* GUIJI_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUIJI_PrefixHeader.pch; sourceTree = "<group>"; };
+		C26750401BF6CF380032EF9D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		C26750411BF6CF380032EF9D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		C26750421BF6CF380032EF9D /* Trail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Trail.storyboard; sourceTree = "<group>"; };
 		C296F1401BF1F381008A9EBD /* TrailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailHelper.h; sourceTree = "<group>"; };
 		C296F1411BF1F381008A9EBD /* TrailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailHelper.m; sourceTree = "<group>"; };
 		C296F14A1BF22B95008A9EBD /* PackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackCell.h; sourceTree = "<group>"; };
@@ -359,6 +364,9 @@
 		C26273311BF07034004DE7D4 /* 系统自动生成页面 */ = {
 			isa = PBXGroup;
 			children = (
+				C26750401BF6CF380032EF9D /* TestViewController.h */,
+				C26750411BF6CF380032EF9D /* TestViewController.m */,
+				C26750421BF6CF380032EF9D /* Trail.storyboard */,
 				C26273321BF07034004DE7D4 /* TrailViewController.h */,
 				C26273331BF07034004DE7D4 /* TrailViewController.m */,
 			);
@@ -490,7 +498,7 @@
 				TargetAttributes = {
 					C26272F91BF07015004DE7D4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 9NX2ZCM4QL;
+						DevelopmentTeam = RHFEFUNF6U;
 					};
 				};
 			};
@@ -532,6 +540,7 @@
 				C213D4DA1BF1D48D0000535D /* Trail_UpCell.xib in Resources */,
 				C26273421BF07034004DE7D4 /* beizhu.txt in Resources */,
 				C26273401BF07034004DE7D4 /* beizhu.txt in Resources */,
+				C26750441BF6CF380032EF9D /* Trail.storyboard in Resources */,
 				C296F1551BF22C1C008A9EBD /* bubble.png in Resources */,
 				C213D4E71BF1EE370000535D /* PackTimeShaft.png in Resources */,
 				C26273451BF07034004DE7D4 /* beizhu.txt in Resources */,
@@ -558,6 +567,7 @@
 				2109FFCD1BF4243D0069339A /* MyCell.m in Sources */,
 				C296F1521BF22BD1008A9EBD /* UIView+Genie.m in Sources */,
 				C2BCD6611BF58F04001AC6A6 /* ClockHelper.m in Sources */,
+				C26750431BF6CF380032EF9D /* TestViewController.m in Sources */,
 				213B7E7C1BF58B7200ED8FBB /* ViewController.m in Sources */,
 				C26272FF1BF07015004DE7D4 /* main.m in Sources */,
 				C26273531BF0926D004DE7D4 /* MapInfo+CoreDataProperties.m in Sources */,
@@ -678,7 +688,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi00;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -694,7 +704,7 @@
 				INFOPLIST_FILE = GUIJI_LIFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi00;
+				PRODUCT_BUNDLE_IDENTIFIER = lanou.3g.com.GUIJi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

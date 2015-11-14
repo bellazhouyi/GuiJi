@@ -65,7 +65,7 @@
     [resultComps setMonth:[currentComps month]];
     [resultComps setDay:[currentComps day]];
     [resultComps setHour:hour];
-    [resultComps setMinute:00];
+    [resultComps setMinute:29];
     [resultComps setSecond:00];
     
     NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];

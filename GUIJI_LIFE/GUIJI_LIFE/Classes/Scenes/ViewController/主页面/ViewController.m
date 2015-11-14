@@ -44,8 +44,6 @@ typedef void (^block) (void);
 // 毛玻璃
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *visualView;
 
-
-// 时间轴
 @property (weak, nonatomic) IBOutlet UIImageView *lineView;
 
 // 下抽屉
@@ -71,12 +69,12 @@ typedef void (^block) (void);
 @property (nonatomic,strong) ScheduleHelper *scheduleHelper;
 
 
+
 @end
 
 static NSString *const cellID = @"mycell";
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -104,16 +102,7 @@ static NSString *const cellID = @"mycell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-   
-    
-    
-    
 }
-
-    
-    
-
-
 
 #pragma mark -- 返回
 - (IBAction)backAction:(UIButton *)sender {
@@ -138,9 +127,6 @@ static NSString *const cellID = @"mycell";
         NSLog(@"动画完成了");
         
     }];
-    
-    
-    
  
     
     
@@ -235,21 +221,33 @@ static NSString *const cellID = @"mycell";
                     
                 }];
             }];
-    
+            
+        
+        
+        
+        
     }
 
     self.viewIsIn = ! self.viewIsIn;
     
 }
 
+
+
+
+
+
+
 #pragma mark -- 毛玻璃消失
+
 - (void)tapAction
 {
     [self genieToRect:_TopButton.frame edge:BCRectEdgeTop];
 }
 
 
-#pragma mark --弹出/收起抽屉
+#pragma mark -- 毛玻璃消失
+
 - (IBAction)topAction:(UIButton *)sender {
     
     
@@ -266,13 +264,14 @@ static NSString *const cellID = @"mycell";
 #pragma mark -- row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     ScheduleHelper *scheduleHelper = [ScheduleHelper sharedDatamanager];
     return  scheduleHelper.scheduleArray.count;
+
 }
 
 
 #pragma mark -- cell内容
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MyCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
@@ -287,6 +286,8 @@ static NSString *const cellID = @"mycell";
     
     cell.leftButton.titleLabel.text = [NSString stringWithFormat:@"%ld",cell.num + 6];
     cell.schedule = schedule;
+
+    
     return cell;
 }
 
@@ -297,13 +298,16 @@ static NSString *const cellID = @"mycell";
 }
 
 #pragma mark -- cell高度
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
 }
 
 
+
 #pragma mark -- 区头
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *titleLabel = [[UILabel alloc] init];
@@ -316,6 +320,7 @@ static NSString *const cellID = @"mycell";
 }
 
 #pragma mark -- 区头高度
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 80;
@@ -325,10 +330,8 @@ static NSString *const cellID = @"mycell";
 // 选中cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     // 获取cell
     MyCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
     // 如果namelabel 为空 点击无效果
     if ([cell.namelabel.text isEqualToString:@""]) {
         return;
@@ -338,14 +341,11 @@ static NSString *const cellID = @"mycell";
         // 如果namelabel 不为空 弹出/收起 抽屉
         [cell genieToRect:cell.leftButton.frame edge:BCRectEdgeRight];
     }
+
+    cell.namelabel.text = @"ttttttttttt";
+    
     
 }
-
-
-
-
-
-
 
 
 #pragma mark - 懒加载
@@ -358,6 +358,16 @@ static NSString *const cellID = @"mycell";
 }
 
 
+#pragma mark -跳转到系统自动生成轨迹页面
+- (IBAction)toTrailVCAction:(UIButton *)sender {
+    
+    TrailViewController *trailVC = [TrailViewController new];
+    
+    [self presentViewController:trailVC animated:YES completion:nil];
+    
+}
+
+
 
 
 
@@ -365,5 +375,9 @@ static NSString *const cellID = @"mycell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
 
 @end
